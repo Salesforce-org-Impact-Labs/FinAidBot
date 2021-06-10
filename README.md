@@ -3,13 +3,14 @@ FinAid Assistant
 
 # Project Overview
 ## Vision & Goals
-Please replace with your projects vision.
-* Goal 1
-* Goal 2
+Develop a chatbot that assists students and their families as they complete the FAFSA. 
+* Identify and set reminders for key dates 
+* Become unstuck on specific questions in the FAFSA
+* Define key terminology used in the FAFSA
 
 
 ## Hub Group Link
-Please replace with the URL for your Power of Us Hub and/or Trailblazer Community group.
+To be updated
 
 # Current Project Team & Accomplishments
 
@@ -20,11 +21,6 @@ Enter persons name   | Contributor   |                                          
 
 ## Sprint (DATE)
 
-### Project Team Accomplishments
-Please replace with the tasks you team was able to accomplish during the Sprint event.
-
-# Past Project Teams
-We recommend creating a Wiki page for past Sprint Event volunteers (per Sprint), and that Sprints goals, accomplishments, etc. Here's a good example: https://github.com/SFDO-Community-Sprints/DataGenerationToolkit. If you prefer to add this information to the readme file, here's a good example of formatting you can use: https://github.com/SFDO-Community-Sprints/Admin-Skills-and-Nonprofit-Salesforce-Teams
 
 
 # Project Resources and Documentation
