@@ -1,7 +1,7 @@
 ---
 name: New Issue
 about: New work items for the FinAid project
-title: ''
+title: "[product area] title"
 labels: to do
 assignees: ''
 
