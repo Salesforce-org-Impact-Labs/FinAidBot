@@ -7,8 +7,10 @@ assignees: ''
 
 ---
 
-What are you trying to accomplish...
+### OVERVIEW
 
-Who is this for....
+### ACCEPTANCE CRITERIA
 
-And why are you trying to do complete this...
+### BACKGROUND
+
+### TECHNICAL INFORMATION
