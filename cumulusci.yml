@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.28.0'
+project:
+    name: FinAid
+    package:
+        name: FinAid
+        api_version: '50.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/FinAid/tests
+            options:
+                outputdir: robot/FinAid/results
+
+    robot_testdoc:
+        options:
+            path: robot/FinAid/tests
+            output: robot/FinAid/doc/FinAid_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75

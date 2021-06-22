@@ -1,30 +1,12 @@
-# Project Name
-FinAid Assistant
+# FinAid
 
-# Project Overview
-## Vision & Goals
-Develop a chatbot that assists students and their families as they complete the FAFSA. 
-* Identify and set reminders for key dates 
-* Become unstuck on specific questions in the FAFSA
-* Define key terminology used in the FAFSA
+Add a brief description of this project here, in Markdown format.
+It will be shown on the main page of the project's GitHub repository.
 
+## Development
 
-## Hub Group Link
-To be updated
+To work on this project in a scratch org:
 
-# Current Project Team & Accomplishments
-
-Full Name            | Team Role     | Github Username                                    | Working Group? 
-------------         | ------------- | -------------                                      |-------------   
-Enter persons name   | Group Leader  | [fakeusername](https://github.com/fakeusername)    | 
-Enter persons name   | Contributor   |                                                    | Enter working group name
-
-## Sprint (DATE)
-
-
-
-# Project Resources and Documentation
-Documentation can be found in the repository [wiki] (URL for wiki where docs are stored)
-
-# Future Contributions (AKA what were you unable to finish at the Sprint)
-Replace with the goals your team would like to continue working on next time.
+1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
+2. Run `cci flow run dev_org --org dev` to deploy this project.
+3. Run `cci org browser dev` to open the org in your browser.
