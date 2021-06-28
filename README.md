@@ -34,7 +34,7 @@ Add a brief description of this project here, in Markdown format. It will be sho
   - FinAid CDO: `sfdx alias:set ImpactLabs-FinAid-CDO=[FinAid CDO Username]`
   - To remove an org alias use: `sfdx alias:unset ImpactLabs-FinAid-CDO`
 - Authorize a persistent org (use `--setalias` option to also set an org alias for convenience)
-  - FinAid DevHub: `sfdx force:auth:web:login --setalias ImpactLabs-FinAid-DevHub --instanceurl https:///il-finaiddevhub-dev-ed.my.salesforce.com`
+  - FinAid DevHub: `sfdx force:auth:web:login --setalias ImpactLabs-FinAid-DevHub --instanceurl https://il-finaiddevhub-dev-ed.my.salesforce.com`
   - FinAid CDO: `sfdx force:auth:web:login --setalias ImpactLabs-FinAid-CDO --instanceurl https://impactlabseducationequity.my.salesforce.com`
 - Display org details, for example,
   - Impact Labs Dev Hub using its previously set alias: `sfdx force:org:display --targetusername ImpactLabs-FinAid-DevHub`
