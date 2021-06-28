@@ -1,3 +1,6 @@
+# FinAid
+Add a brief description of this project here, in Markdown format. It will be shown on the main page of the project's GitHub repository.
+## Development 
 ### Quick Start
 #### Prerequisites
 1. [Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.232.0.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm). The **Salesforce CLI** notes below includes CLI commands to get you started.
