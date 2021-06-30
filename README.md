@@ -72,8 +72,6 @@ _TO DO: Add a brief description of this project here, in Markdown format. It wil
   - `cci flow run dev_org --org dev` (where `dev` is the scratch org alias)
 - Open the scratch org in your browser
   - `cci org browser dev` (opens the `dev` scratch org in your browser)
-- Open the org in a browser. 
-  - `cci org browser dev` 
 - List orgs
   - `cci org list`
 - List `dev` org changes for a specific metadata type
