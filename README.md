@@ -1,5 +1,5 @@
 # FinAid
-Add a brief description of this project here, in Markdown format. It will be shown on the main page of the project's GitHub repository.
+_TO DO: Add a brief description of this project here, in Markdown format. It will be shown on the main page of the project's GitHub repository._
 ## Development 
 ### Quick Start
 #### Prerequisites
