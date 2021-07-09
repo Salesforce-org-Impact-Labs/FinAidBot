@@ -1,5 +1,6 @@
 {
   "orgName": "FinAid - Dev Org",
+  "features": ["Knowledge","Chatbot"],
   "edition": "Developer",
   "settings": {
     "lightningExperienceSettings": {
@@ -19,6 +20,15 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "liveAgentSettings": {
+      "enableLiveAgent": true
+    },
+    "botSettings": {
+      "enableBots": true
+    },
+    "knowledgeSettings": {
+      "enableKnowledge": true
     }
   }
 }

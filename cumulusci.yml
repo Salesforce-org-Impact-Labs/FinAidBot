@@ -23,3 +23,17 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+
+    deploy_bot:
+        description: Deploys Bot Alpha1 using dx.
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: "force:source:deploy -m Bot:Alpha1,BotVersion:Alpha1.v1"
+
+flows:
+    deploy_unmanaged:
+        steps:
+            3:
+                task: deploy_bot
+            3.1:
+                task: deploy_bot
