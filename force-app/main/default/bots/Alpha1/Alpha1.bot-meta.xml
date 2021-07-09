@@ -143,6 +143,6 @@
         <label>Routable Id</label>
     </contextVariables>
     <description>FAFSA bot explorations</description>
-    <label>Alpha1</label>
+    <label>FAFSA Bot</label>
     <logPrivateConversationData>true</logPrivateConversationData>
 </Bot>
