@@ -28,7 +28,8 @@
       "enableBots": true
     },
     "knowledgeSettings": {
-      "enableKnowledge": true
+      "enableKnowledge": true,
+      "enableLightningKnowledge": true
     }
   }
 }
