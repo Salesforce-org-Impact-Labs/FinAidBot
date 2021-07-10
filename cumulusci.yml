@@ -23,3 +23,20 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+
+    add_knowledge_user_to_system_admin:
+        description: Adds Knowledge User setting to System Admin user.
+        class_path: cumulusci.tasks.salesforce.composite.CompositeApi
+        options:
+            data_files:
+                - "datasets/system_admin.json"
+
+flows:
+    config_dev:
+        steps:
+            3:
+                task: add_knowledge_user_to_system_admin
+            4:
+                task: load_dataset
+                options:
+                    set_recently_viewed: 0
