@@ -1,0 +1,18 @@
+{
+    "allOrNone": true,
+    "compositeRequest": [
+      {
+        "method": "GET",
+        "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+User+WHERE+Name+=+'User+User'",
+        "referenceId": "systemAdminUserGet"
+      },
+      {
+        "method": "PATCH",
+        "url": "/services/data/v46.0/sobjects/User/@{systemAdminUserGet.records[0].Id}",
+        "referenceId": "systemAdminUserPatch",
+        "body": {
+          "UserPermissionsKnowledgeUser": true
+        }
+      }
+    ]
+}
