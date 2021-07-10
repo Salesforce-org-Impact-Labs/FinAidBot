@@ -107,7 +107,7 @@ We can take advantage of a persistent org to allow more people to see developmen
 
 #### Dev Hub Org Setup
 1. [Add Salesforce DX Users](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_add_users.htm#sfdx_setup_add_users). Salesforce license required: **Salesforce**, **Salesforce Platform**, **Developer**
-2. Permission Set. Required to grant non Sys Admins access to
+2. Create and assign Permission Set. Required to grant non Sys Admins access to
    1. Specific Salesforce DX objects
       1. Object Settings > **Scratch Org Infos** > Read, Create, Edit, and Delete
       2. Object Settings > **Active Scratch Orgs** > Read, Edit, and Delete
