@@ -222,6 +222,20 @@
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Unfortunately, there are no agents available at the moment</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>No_Agent_Available</developerName>
+        <label>No Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
@@ -319,20 +333,6 @@
         <description>Article Answers (Beta) can be used instead of the FAFSA Terms dialog</description>
         <developerName>Answer_Automation</developerName>
         <label>Article Answers</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botSteps>
-            <botMessages>
-                <message>Unfortunately, there are no agents available at the moment</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <developerName>No_Agent_Available</developerName>
-        <label>No Agent</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
