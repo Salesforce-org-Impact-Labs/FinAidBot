@@ -102,6 +102,7 @@
         </mlSlotClasses>
         <name>Alpha1</name>
     </botMlDomain>
+    <botUser>rtfinaid.bot@salesforce.com</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>LiveChatTranscript</SObjectType>

@@ -5,6 +5,10 @@
         <developerName>FinAid</developerName>
         <label>FinAid</label>
     </botDialogGroups>
+    <botDialogGroups>
+        <developerName>FinAid_PoC</developerName>
+        <label>FinAid - PoC</label>
+    </botDialogGroups>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
@@ -124,19 +128,12 @@
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
+        <botDialogGroup>FinAid_PoC</botDialogGroup>
         <botSteps>
             <type>Wait</type>
         </botSteps>
         <developerName>Getting_Started</developerName>
         <label>Getting Started</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <developerName>FAQs</developerName>
-        <label>FAQs</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -225,20 +222,7 @@
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
-        <botSteps>
-            <botMessages>
-                <message>Unfortunately, there are no agents available at the moment</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <developerName>No_Agent_Available</developerName>
-        <label>No Agent</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
                 <botMessages>
@@ -253,7 +237,7 @@
                 </botVariableOperands>
                 <invalidInputBotNavigation>
                     <botNavigationLinks>
-                        <targetBotDialog>Confused</targetBotDialog>
+                        <targetBotDialog>FAFSA_Prompt</targetBotDialog>
                     </botNavigationLinks>
                     <type>Redirect</type>
                 </invalidInputBotNavigation>
@@ -335,6 +319,20 @@
         <description>Article Answers (Beta) can be used instead of the FAFSA Terms dialog</description>
         <developerName>Answer_Automation</developerName>
         <label>Article Answers</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Unfortunately, there are no agents available at the moment</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>No_Agent_Available</developerName>
+        <label>No Agent</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -719,7 +717,7 @@
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
+        <botDialogGroup>FinAid_PoC</botDialogGroup>
         <botSteps>
             <botSteps>
                 <botVariableOperation>
@@ -835,6 +833,7 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
+        <description>Searches the Knowledge object directly for answers. Possible option before Article Answers becomes generally available.</description>
         <developerName>FAFSA_Terms</developerName>
         <label>FAFSA Terms</label>
         <showInFooterMenu>false</showInFooterMenu>
@@ -854,94 +853,10 @@
             <type>Message</type>
         </botSteps>
         <botSteps>
-            <botVariableOperation>
-                <botMessages>
-                    <message>I found the following articles</message>
-                </botMessages>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Object</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>AnswerSelectedResult</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <invalidInputBotNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>FAFSA_Prompt</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </invalidInputBotNavigation>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyOptionTemplate>{!Title}</quickReplyOptionTemplate>
-                <quickReplyType>Dynamic</quickReplyType>
-                <quickReplyWidgetType>Menu</quickReplyWidgetType>
-                <sourceVariableName>_AnswerResults</sourceVariableName>
-                <sourceVariableType>ConversationVariable</sourceVariableType>
-                <type>Collect</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
             <botMessages>
-                <message>{!AnswerSelectedResult.Answer}</message>
+                <message>What word would you like to learn about?</message>
             </botMessages>
             <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <botMessages>
-                    <message>Was this useful?</message>
-                </botMessages>
-                <botQuickReplyOptions>
-                    <literalValue>Yes</literalValue>
-                </botQuickReplyOptions>
-                <botQuickReplyOptions>
-                    <literalValue>No</literalValue>
-                </botQuickReplyOptions>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Boolean</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>AnswerFeedback</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyType>Static</quickReplyType>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botInvocation>
-                <invocationActionName>generateKnowledgeLogData</invocationActionName>
-                <invocationActionType>logFeedback</invocationActionType>
-                <invocationMappings>
-                    <parameterName>feedback</parameterName>
-                    <type>Input</type>
-                    <variableName>AnswerFeedback</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>selectedResult</parameterName>
-                    <type>Input</type>
-                    <variableName>AnswerSelectedResult</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>results</parameterName>
-                    <type>Input</type>
-                    <variableName>_AnswerResults</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>input</parameterName>
-                    <type>Input</type>
-                    <variableName>_AnswerInput</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-            </botInvocation>
-            <type>Invocation</type>
         </botSteps>
         <botSteps>
             <type>Wait</type>
@@ -964,7 +879,7 @@
         </botSteps>
         <description>Prompts the user to enter some text when the system variable &quot;[System] Answer Input (Text)&quot; that hold user input is still empty. An example is when the Article Answer is invoked from a menu.</description>
         <developerName>FAFSA_Prompt</developerName>
-        <label>FAFSA Prompt</label>
+        <label>What word would you like to learn about?</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <conversationSystemDialogs>
