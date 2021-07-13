@@ -379,6 +379,263 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
+                <message>OK. You can check your eligibility here: https://fafsa.ed.gov/spa/fafsa4c/#/landing</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Eligibility dialog per FAFSA conversation experience design document.</description>
+        <developerName>FAFSA_Eligibility</developerName>
+        <label>Learn if I qualify for financial aid</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid_PoC</botDialogGroup>
+        <botSteps>
+            <botMessages>
+                <message>Alright, happy to help.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>DEBUG: In FAFSA_Terms dialog. Article Answers should take over from here but should not go to the Confused dialog if the user has not yet typed in an input.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Lets Article Answers process the user input and provide an answer.</description>
+        <developerName>FAFSA_Terms</developerName>
+        <label>FAFSA Terms</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botMessages>
+                <message>Alright, happy to help.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>What word would you like to learn about?</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Clone of Article Answers (Beta) can be used instead of the FAFSA Terms dialog. Customized for Impact Labs FinAid Bot</description>
+        <developerName>FAFSA_Words</developerName>
+        <label>Understand what a FAFSA word means</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botMessages>
+                <message>What word would you like to learn about?</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Prompts the user to enter some text when the system variable &quot;[System] Answer Input (Text)&quot; that hold user input is still empty. An example is when the Article Answer is invoked from a menu.</description>
+        <developerName>FAFSA_Prompt</developerName>
+        <label>What word would you like to learn about?</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botSteps>
+                <botVariableOperation>
+                    <botVariableOperands>
+                        <targetName>AnswerFeedback</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <type>Unset</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botVariableOperation>
+                    <botVariableOperands>
+                        <targetName>FAFSA_Term</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <type>Unset</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botVariableOperation>
+                    <botVariableOperands>
+                        <targetName>AnswerSelectedResult</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <type>Unset</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Clears variables, usually before starting another dialog.</description>
+        <developerName>FAFSA_Clear_memory</developerName>
+        <label>Clear memory</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botVariableOperation>
+                <botMessages>
+                    <message>Can I assist you with anything else?</message>
+                </botMessages>
+                <botQuickReplyOptions>
+                    <literalValue>Yes - Take me back to the Main Menu</literalValue>
+                </botQuickReplyOptions>
+                <botQuickReplyOptions>
+                    <literalValue>No - I&apos;m all set for now</literalValue>
+                </botQuickReplyOptions>
+                <botVariableOperands>
+                    <disableAutoFill>true</disableAutoFill>
+                    <sourceName>_Boolean</sourceName>
+                    <sourceType>StandardMlSlotClass</sourceType>
+                    <targetName>AnswerFeedback</targetName>
+                    <targetType>ConversationVariable</targetType>
+                </botVariableOperands>
+                <optionalCollect>false</optionalCollect>
+                <quickReplyType>Static</quickReplyType>
+                <quickReplyWidgetType>Menu</quickReplyWidgetType>
+                <type>Collect</type>
+            </botVariableOperation>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>AnswerFeedback</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>Equals</operatorType>
+                <rightOperandValue>true</rightOperandValue>
+            </botStepConditions>
+            <botSteps>
+                <botVariableOperation>
+                    <botVariableOperands>
+                        <targetName>AnswerFeedback</targetName>
+                        <targetType>ConversationVariable</targetType>
+                    </botVariableOperands>
+                    <type>Unset</type>
+                </botVariableOperation>
+                <type>VariableOperation</type>
+            </botSteps>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Main_Menu</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>AnswerFeedback</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>Equals</operatorType>
+                <rightOperandValue>false</rightOperandValue>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>End_Chat</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Asks the user of anything else before ending the chat. This is where most dialogs redirect to per conversation experience design specs.</description>
+        <developerName>FAFSA_Anything_Else</developerName>
+        <label>Can I assist you with anything else?</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botMessages>
+                <message>OK, what question number on the FAFSA did you want help with?</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>State</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>IsSet</operatorType>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
+        <developerName>FAFSA_Application_Form_Question</developerName>
+        <label>Get help with a question on the FAFSA application</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>FinAid_PoC</botDialogGroup>
+        <botSteps>
+            <botMessages>
                 <message>Most students are eligible to receive financial aid from the federal government to help pay for college or career school.</message>
             </botMessages>
             <type>Message</type>
@@ -735,238 +992,10 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <developerName>FAFSA_Eligibility</developerName>
-        <label>Learn if I qualify for financial aid</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid_PoC</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>Alright, happy to help.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>DEBUG: In FAFSA_Terms dialog. Article Answers should take over from here but should not go to the Confused dialog if the user has not yet typed in an input.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Lets Article Answers process the user input and provide an answer.</description>
-        <developerName>FAFSA_Terms</developerName>
-        <label>FAFSA Terms</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>Alright, happy to help.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>What word would you like to learn about?</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Clone of Article Answers (Beta) can be used instead of the FAFSA Terms dialog. Customized for Impact Labs FinAid Bot</description>
-        <developerName>FAFSA_Words</developerName>
-        <label>Understand what a FAFSA word means</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>What word would you like to learn about?</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Prompts the user to enter some text when the system variable &quot;[System] Answer Input (Text)&quot; that hold user input is still empty. An example is when the Article Answer is invoked from a menu.</description>
-        <developerName>FAFSA_Prompt</developerName>
-        <label>What word would you like to learn about?</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>AnswerFeedback</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>FAFSA_Term</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>AnswerSelectedResult</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Clears variables, usually before starting another dialog.</description>
-        <developerName>FAFSA_Clear_memory</developerName>
-        <label>Clear memory</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
-            <botVariableOperation>
-                <botMessages>
-                    <message>Can I assist you with anything else?</message>
-                </botMessages>
-                <botQuickReplyOptions>
-                    <literalValue>Yes - Take me back to the Main Menu</literalValue>
-                </botQuickReplyOptions>
-                <botQuickReplyOptions>
-                    <literalValue>No - I&apos;m all set for now</literalValue>
-                </botQuickReplyOptions>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Boolean</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>AnswerFeedback</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyType>Static</quickReplyType>
-                <quickReplyWidgetType>Menu</quickReplyWidgetType>
-                <type>Collect</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>AnswerFeedback</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>Equals</operatorType>
-                <rightOperandValue>true</rightOperandValue>
-            </botStepConditions>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>AnswerFeedback</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>Main_Menu</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <type>Navigation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>AnswerFeedback</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>Equals</operatorType>
-                <rightOperandValue>false</rightOperandValue>
-            </botStepConditions>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>End_Chat</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <type>Navigation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Asks the user of anything else before ending the chat. This is where most dialogs redirect to per conversation experience design specs.</description>
-        <developerName>FAFSA_Anything_Else</developerName>
-        <label>Can I assist you with anything else?</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>OK, what question number on the FAFSA did you want help with?</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>State</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <type>Navigation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
-        <developerName>FAFSA_Application_Form_Question</developerName>
-        <label>Get help with a question on the FAFSA application</label>
-        <showInFooterMenu>false</showInFooterMenu>
+        <description>V2 of the eligibility dialog. This version is not per conversation experience design document</description>
+        <developerName>FAFSA_Eligibility_v2</developerName>
+        <label>Learn if I qualify for financial aid Copy</label>
+        <showInFooterMenu>true</showInFooterMenu>
     </botDialogs>
     <conversationSystemDialogs>
         <dialog>Error_Handling</dialog>

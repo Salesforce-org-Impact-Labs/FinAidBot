@@ -143,7 +143,7 @@
         <developerName>RoutableId</developerName>
         <label>Routable Id</label>
     </contextVariables>
-    <description>FAFSA bot explorations</description>
+    <description>FAFSA Bot Sprint 3</description>
     <label>FAFSA Bot</label>
     <logPrivateConversationData>true</logPrivateConversationData>
 </Bot>
