@@ -111,7 +111,7 @@
         </botSteps>
         <description>Version of the dialog used with V2 of the bot. This version does not yet implement the conversation experience design spec.</description>
         <developerName>Key_Events_and_Deadlines</developerName>
-        <label>Check a deadline date</label>
+        <label>Check a deadline date for FAFSA Bot V2</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -1050,12 +1050,6 @@
                 </botMessages>
                 <type>Message</type>
             </botSteps>
-            <botSteps>
-                <botMessages>
-                    <message>Got another question?</message>
-                </botMessages>
-                <type>Message</type>
-            </botSteps>
             <type>Group</type>
         </botSteps>
         <botSteps>
@@ -1070,6 +1064,9 @@
                 </botMessages>
                 <type>Message</type>
             </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
             <botSteps>
                 <botNavigation>
                     <botNavigationLinks>
