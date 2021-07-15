@@ -5,10 +5,6 @@
         <developerName>FinAid</developerName>
         <label>FinAid</label>
     </botDialogGroups>
-    <botDialogGroups>
-        <developerName>FinAid_PoC</developerName>
-        <label>FinAid PoC</label>
-    </botDialogGroups>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
@@ -314,34 +310,6 @@
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
-        <botDialogGroup>FinAid_PoC</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>Alright, happy to help.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botMessages>
-                <message>DEBUG: In FAFSA_Terms dialog. Article Answers should take over from here but should not go to the Confused dialog if the user has not yet typed in an input.</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Lets Article Answers process the user input and provide an answer.</description>
-        <developerName>FAFSA_Terms</developerName>
-        <label>FAFSA Terms</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
@@ -469,70 +437,10 @@
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>AnswerFeedback</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>FAFSA_Term</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <botSteps>
-                <botVariableOperation>
-                    <botVariableOperands>
-                        <targetName>AnswerSelectedResult</targetName>
-                        <targetType>ConversationVariable</targetType>
-                    </botVariableOperands>
-                    <type>Unset</type>
-                </botVariableOperation>
-                <type>VariableOperation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Clears variables, usually before starting another dialog.</description>
-        <developerName>FAFSA_Clear_memory</developerName>
-        <label>Clear memory</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid</botDialogGroup>
-        <botSteps>
             <botMessages>
                 <message>OK, what question number on the FAFSA did you want help with?</message>
             </botMessages>
             <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>State</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <type>Navigation</type>
-            </botSteps>
-            <type>Group</type>
         </botSteps>
         <botSteps>
             <type>Wait</type>
@@ -540,181 +448,6 @@
         <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
         <developerName>FAFSA_Application_Form_Question</developerName>
         <label>Get help with a question on the FAFSA application</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid_PoC</botDialogGroup>
-        <botSteps>
-            <botMessages>
-                <message>OK. You can check your eligibility here: https://fafsa.ed.gov/spa/fafsa4c/#/landing</message>
-            </botMessages>
-            <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <botMessages>
-                    <message>Can I assist you with anything else?</message>
-                </botMessages>
-                <botQuickReplyOptions>
-                    <literalValue>Yes - Take me back to the Main Menu</literalValue>
-                </botQuickReplyOptions>
-                <botQuickReplyOptions>
-                    <literalValue>No - I&apos;m all set for now</literalValue>
-                </botQuickReplyOptions>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Boolean</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>Assist_with_anything_else</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyType>Static</quickReplyType>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Assist_with_anything_else</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>Equals</operatorType>
-                <rightOperandValue>false</rightOperandValue>
-            </botStepConditions>
-            <botSteps>
-                <conversationSystemMessage>
-                    <type>EndChat</type>
-                </conversationSystemMessage>
-                <type>SystemMessage</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botNavigation>
-                <botNavigationLinks>
-                    <targetBotDialog>Key_Events_and_Deadlines</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Words</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Application_Form_Question</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Eligibility</targetBotDialog>
-                </botNavigationLinks>
-                <type>Redirect</type>
-            </botNavigation>
-            <type>Navigation</type>
-        </botSteps>
-        <description>V2 of the eligibility dialog based on the Bot CXD</description>
-        <developerName>FAFSA_Eligibility_v2</developerName>
-        <label>Learn if I qualify for financial aid V2</label>
-        <showInFooterMenu>false</showInFooterMenu>
-    </botDialogs>
-    <botDialogs>
-        <botDialogGroup>FinAid_PoC</botDialogGroup>
-        <botSteps>
-            <botVariableOperation>
-                <botMessages>
-                    <message>In what state are you based?</message>
-                </botMessages>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Text</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>State</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <botInvocation>
-                    <invocationActionName>FAFSA_Bot_Lookup_FAFSA_Deadline</invocationActionName>
-                    <invocationActionType>flow</invocationActionType>
-                    <invocationMappings>
-                        <parameterName>State</parameterName>
-                        <type>Input</type>
-                        <variableName>State</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>Deadline</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Matched_FAFSA_Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>FAFSA_Deadline_Record</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                </botInvocation>
-                <type>Set</type>
-            </botVariableOperation>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botMessages>
-                    <message>{!Deadline}</message>
-                </botMessages>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <botMessages>
-                    <message>Please see here for deadlines for every state: https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines.</message>
-                </botMessages>
-                <type>Message</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsNotSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botMessages>
-                    <message>Please see here for deadlines for every state: https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines.</message>
-                </botMessages>
-                <type>Message</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <type>Navigation</type>
-            </botSteps>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <type>Wait</type>
-        </botSteps>
-        <description>Version of the dialog used with V2 of the bot. This version does not yet implement the conversation experience design spec.</description>
-        <developerName>FAFSA_Deadlines</developerName>
-        <label>Check a deadline date V1</label>
-        <mlIntent>FAFSA_Deadlines</mlIntent>
-        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -1233,36 +966,14 @@ To be considered for the most money, you need to submit by the college&apos;s de
         <label>Enrolled_Accepted</label>
     </conversationVariables>
     <conversationVariables>
-        <collectionType>List</collectionType>
-        <dataType>Object</dataType>
-        <developerName>FAFSA_Deadline</developerName>
-        <label>FAFSA Deadline</label>
-    </conversationVariables>
-    <conversationVariables>
         <dataType>Object</dataType>
         <developerName>FAFSA_Deadline_Record</developerName>
         <label>FAFSA Deadline Record</label>
     </conversationVariables>
     <conversationVariables>
-        <dataType>Text</dataType>
-        <developerName>FAFSA_Term</developerName>
-        <label>FAFSA Term</label>
-    </conversationVariables>
-    <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>High_School_GED</developerName>
         <label>High School_GED</label>
-    </conversationVariables>
-    <conversationVariables>
-        <collectionType>List</collectionType>
-        <dataType>Object</dataType>
-        <developerName>Knowledge_Articles</developerName>
-        <label>Knowledge Articles</label>
-    </conversationVariables>
-    <conversationVariables>
-        <dataType>Object</dataType>
-        <developerName>Knowledge_Article_Record</developerName>
-        <label>Knowledge Article Record</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
