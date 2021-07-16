@@ -491,5 +491,4 @@ INSERT INTO "Knowledge__kav" VALUES(327,'22','fafsa-question-22','If you are a m
 INSERT INTO "Knowledge__kav" VALUES(328,'23','fafsa-question-23','This question cannot be left blank. If you answer "Yes" to this question, you can still complete and submit the FAFSA. You will receive an additional worksheet to fill out to make sure you are still eligible for aid. If you have never applied for financial aid before, select "No."');
 INSERT INTO "Knowledge__kav" VALUES(329,'24','fafsa-question-24','Some states offer aid by the highest level of education your parents have completed. Select the answer that best describes your parent''s highest level of education completed.');
 INSERT INTO "Knowledge__kav" VALUES(330,'25','fafsa-question-25','Some states offer aid by the highest level of education your parents have completed. Select the answer that best describes your parent''s highest level of education completed.');
-INSERT INTO "Knowledge__kav" VALUES(331,'Test','Test','Test');
 COMMIT;
