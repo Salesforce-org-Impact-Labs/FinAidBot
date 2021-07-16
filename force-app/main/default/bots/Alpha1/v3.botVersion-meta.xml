@@ -13,10 +13,13 @@
                     <targetBotDialog>Federal_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
+                    <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
                     <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
+                    <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
                     <targetBotDialog>I_m_not_sure</targetBotDialog>
@@ -507,16 +510,7 @@
         <botSteps>
             <botNavigation>
                 <botNavigationLinks>
-                    <targetBotDialog>Key_Events_and_Deadlines</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Words</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Application_Form_Question</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Eligibility</targetBotDialog>
+                    <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -582,7 +576,7 @@
             </botStepConditions>
             <botSteps>
                 <botMessages>
-                    <message>{!Deadline}</message>
+                    <message>{!State} - {!Deadline}</message>
                 </botMessages>
                 <type>Message</type>
             </botSteps>
@@ -593,6 +587,49 @@
                 <message>College FAFSA deadlines are usually early and can differ by school. If you didn&apos;t see the deadline above you should search online for their most up-to-date deadline date.</message>
             </botMessages>
             <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botVariableOperation>
+                <botMessages>
+                    <message>Do you want to check another college&apos;s deadline?</message>
+                </botMessages>
+                <botQuickReplyOptions>
+                    <literalValue>Yes</literalValue>
+                </botQuickReplyOptions>
+                <botQuickReplyOptions>
+                    <literalValue>No</literalValue>
+                </botQuickReplyOptions>
+                <botVariableOperands>
+                    <disableAutoFill>true</disableAutoFill>
+                    <sourceName>_Boolean</sourceName>
+                    <sourceType>StandardMlSlotClass</sourceType>
+                    <targetName>Another_college_deadline</targetName>
+                    <targetType>ConversationVariable</targetType>
+                </botVariableOperands>
+                <optionalCollect>false</optionalCollect>
+                <quickReplyType>Static</quickReplyType>
+                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
+                <type>Collect</type>
+            </botVariableOperation>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>Another_college_deadline</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>Equals</operatorType>
+                <rightOperandValue>true</rightOperandValue>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
         </botSteps>
         <botSteps>
             <botMessages>
@@ -609,7 +646,10 @@
                     <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>No_I_m_all_done</targetBotDialog>
+                    <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -624,7 +664,7 @@
         <botSteps>
             <botVariableOperation>
                 <botMessages>
-                    <message>In what state are you based?</message>
+                    <message>What state do you want to check the deadline for?</message>
                 </botMessages>
                 <botVariableOperands>
                     <disableAutoFill>true</disableAutoFill>
@@ -716,7 +756,7 @@
         <botSteps>
             <botVariableOperation>
                 <botMessages>
-                    <message>Checking in: do you have more questions about FAFSA deadlines?</message>
+                    <message>Do you want to check another state&apos;s deadline?</message>
                 </botMessages>
                 <botQuickReplyOptions>
                     <literalValue>Yes</literalValue>
@@ -728,7 +768,7 @@
                     <disableAutoFill>true</disableAutoFill>
                     <sourceName>_Boolean</sourceName>
                     <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>More_Deadline_Questions</targetName>
+                    <targetName>Another_state_deadline</targetName>
                     <targetType>ConversationVariable</targetType>
                 </botVariableOperands>
                 <optionalCollect>false</optionalCollect>
@@ -740,7 +780,7 @@
         </botSteps>
         <botSteps>
             <botStepConditions>
-                <leftOperandName>More_Deadline_Questions</leftOperandName>
+                <leftOperandName>Another_state_deadline</leftOperandName>
                 <leftOperandType>ConversationVariable</leftOperandType>
                 <operatorType>Equals</operatorType>
                 <rightOperandValue>true</rightOperandValue>
@@ -748,27 +788,33 @@
             <botSteps>
                 <botNavigation>
                     <botNavigationLinks>
-                        <targetBotDialog>Key_Events_and_Deadlines</targetBotDialog>
+                        <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
                     </botNavigationLinks>
-                    <type>Call</type>
+                    <type>Redirect</type>
                 </botNavigation>
                 <type>Navigation</type>
             </botSteps>
             <type>Group</type>
         </botSteps>
         <botSteps>
+            <botMessages>
+                <message>Checking in: do you have more questions about FAFSA deadlines?</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
             <botNavigation>
                 <botNavigationLinks>
-                    <targetBotDialog>Key_Events_and_Deadlines</targetBotDialog>
+                    <targetBotDialog>Federal_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Words</targetBotDialog>
+                    <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Application_Form_Question</targetBotDialog>
+                    <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>FAFSA_Eligibility</targetBotDialog>
+                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -776,6 +822,20 @@
         </botSteps>
         <developerName>My_state_s_deadline_for_2021_22</developerName>
         <label>My state&apos;s deadline for 2021-22</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>FAFSA_Anything_Else</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
+            <type>Navigation</type>
+        </botSteps>
+        <developerName>No_I_don_t_have_more_deadline_questions</developerName>
+        <label>No, I don&apos;t have more deadline questions</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -837,10 +897,13 @@ To be considered for the most money, you need to submit by the college&apos;s de
                     <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
+                    <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
                     <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>No_I_m_all_done</targetBotDialog>
+                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -879,7 +942,10 @@ To be considered for the most money, you need to submit by the college&apos;s de
                     <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <targetBotDialog>No_I_m_all_done</targetBotDialog>
+                    <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -891,6 +957,12 @@ To be considered for the most money, you need to submit by the college&apos;s de
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
+        <botSteps>
+            <botMessages>
+                <message>What would you like to do?</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
         <botSteps>
             <botNavigation>
                 <botNavigationLinks>
@@ -925,6 +997,16 @@ To be considered for the most money, you need to submit by the college&apos;s de
         <dialog>Answer_Automation</dialog>
         <type>KnowledgeFallback</type>
     </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>Another_college_deadline</developerName>
+        <label>Another college deadline</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>Another_state_deadline</developerName>
+        <label>Another state deadline</label>
+    </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>AnswerFeedback</developerName>
