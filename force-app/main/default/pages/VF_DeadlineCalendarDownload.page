@@ -1,0 +1,136 @@
+<apex:page controller="Apex_DeadlineCalendarDownloadController" showHeader="true" lightningStylesheets="true">
+    <div class="slds-summary-detail"  style="width:600px; text-align:center">
+        <div class="slds-summary-detail__title">
+            <h2 class="slds-text-heading_small" title="Title">
+                FAFSA Dealine details for : {!FafsaDeadline.State__c}
+            </h2>
+        </div>
+        <div class="slds-summary-detail__content">
+            <p>
+                {!FafsaDeadline.Deadline__c}
+            </p>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <span class="slds-icon_container slds-icon-standard-key_dates" title="description of icon when needed">
+                      <svg aria-hidden="true" class="slds-icon slds-icon_x-small">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                             xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#key_dates')}"></use>
+                      </svg>
+                    </span>
+                </td>
+                <td><a id="downloadLink" download="event.ics" class="slds-has-blur-focus"  style="text-align:center">⇩ Download ICS file</a></td>
+            </tr>
+        </table>
+        
+        
+
+    </div>
+    <script>
+    	let icsFile = null;
+       	let fstatecode = '';
+    //   console.log(typeof({!FafsaDeadline.Deadline__c}));
+    
+    	(function () {
+            console.log('url=='+ window.location.search);
+            const urlParams = new URLSearchParams(window.location.search);
+            let statecode = urlParams.get('scode');
+            fstatecode= statecode;
+            console.log('scode ==' + statecode);
+            //  let tmpstr =  {!FafsaDeadline.Deadline_Date__c}.toString() ;
+            console.log({!DDDay});
+            console.log({!DDMonth});
+            console.log({!DDYear});
+            //    let datestrarr = tmpstr.toString().split("/");
+            
+            let deadlinedate= new Date({!DDYear}, {!DDMonth}-1, {!DDDay});
+            //   deadlinedate = {!FafsaDeadline.Deadline_Date__c};
+                console.log('deadlinedate ==' + deadlinedate);
+            //    document.querySelector("#startDate").valueAsDate = deadlinedate;
+            //   document.querySelector("#endDate").valueAsDate = deadlinedate;
+                createEventFile(deadlinedate);
+            //     document.querySelector("#endDate").min = new Date().toISOString().substr(0, 10);
+            //   document.querySelector("#startDate").addEventListener("change", function () {
+            ///     var val = this.value;
+            //     document.querySelector("#endDate").min = new Date(val)
+            //        .toISOString()
+            //        .substr(0, 10);
+            //    });
+          
+        })();
+    
+    
+    
+    function createEventFile(dl) {
+        console.log('inside createventfile');
+      var eventDate = {
+          start: dl,
+          end: dl
+        },
+        summary = 'Fafsa deadline code for ' + '{!FafsaDeadline.State__c}',
+          //  description = '{!FafsaDeadline.Deadline__c}';
+          description = '{!FAFSA_DeadlineStr}';
+      var link = document.querySelector("#downloadLink");
+        console.log('link ==' + link);
+        console.log('inside createeventfile before calling makeIcsfile');
+          link.href = makeIcsFile(eventDate, summary, description);
+        //  link.classList.remove("hide");
+        //  makeIcsFile(eventDate, summary, description);
+    }
+    
+    function makeIcsFile(date, summary, description) {
+        console.log('inside makeics file');
+      	var test =
+        "BEGIN:VCALENDAR\n" +
+        "CALSCALE:GREGORIAN\n" +
+        "METHOD:PUBLISH\n" +
+        "PRODID:-//Test Cal//EN\n" +
+        "VERSION:2.0\n" +
+        "BEGIN:VEVENT\n" +
+        "UID:test-1\n" +
+        "DTSTART;VALUE=DATE:" +
+        convertDate(date.start) +
+        "\n" +
+        "DTEND;VALUE=DATE:" +
+        convertDate(date.end) +
+        "\n" +
+        "SUMMARY:" +
+        summary +
+        "\n" +
+        "DESCRIPTION:" +
+        description +
+        "\n" +
+         "BEGIN:VALARM"+
+         "TRIGGER:-PT7D"+
+          "REPEAT:1"+
+          "ACTION:DISPLAY"+
+          "DESCRIPTION:"+
+            summary +
+          "END:VALARM" +
+        "END:VEVENT\n" +
+        "END:VCALENDAR";
+            console.log('inside makeics file 1');
+      var data = new File([test], { type: "text/plain" });
+            console.log('inside makeics file 2');
+      // If we are replacing a previously generated file we need to
+      // manually revoke the object URL to avoid memory leaks.
+      if (icsFile !== null) {
+        window.URL.revokeObjectURL(icsFile);
+      }else         console.log('inside makeics file == ' + 'file is null' );
+    
+      icsFile = window.URL.createObjectURL(data);
+    	        console.log('inside makeics file 3');
+      return icsFile;
+    }
+    
+    function convertDate(date) {
+        console.log('inside convert date ==' + date);
+      var event = new Date(date).toISOString();
+      event = event.split("T")[0];
+      event = event.split("-");
+      event = event.join("");
+      return event;
+    }
+    </script>
+</apex:page>
