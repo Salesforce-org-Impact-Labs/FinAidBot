@@ -42,6 +42,7 @@ Manually delete the **Article Answers** dialog's **Generate Knowledge Feedback L
 3. Repeat steps above for all versions that use **Article Answers** you want to deploy.
 ```   
 <botDialogs>
+    <!-- START of botSteps to delete -->
     <botSteps>
         <botInvocation>
             <invocationActionName>generateKnowledgeLogData</invocationActionName>
@@ -49,6 +50,7 @@ Manually delete the **Article Answers** dialog's **Generate Knowledge Feedback L
         </botInvocation>
         ...
     </botSteps>
+    <!-- END of botSteps to delete -->
     ...
     <description>Article Answers (Beta) can be used instead of the FAFSA Terms dialog</description>
     <developerName>Answer_Automation</developerName>
