@@ -1,3 +1,52 @@
+## Post-Deployment: Load Datasets
+### FAFSA Deadlines
+Use the **Salesforce Data Import Wizard** to import the [FAFSA Deadlines CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Deadlines.csv) into the **FAFSA Deadlines** custom object (`FAFSA_Deadlines__c`). Note: you have to download the CSV file for the steps below.
+
+1. Using the Salesforce Lightning experience UI, go to **Setup -> Integrations -> Data Import Wizard** or search for "data import" in Setup's Quick Find box. Select **Data Import Wizard** to bring up the **Data Import Wizard** page.
+2. Locate and click on the **Launch the Wizard!** button.
+3. Once in the wizard page, select the **FAFSA Deadlines** custom object from the **Custom objects** tab.
+4. Under the **What do you want to do?** section,
+   1. Choose **Add new and update existing records** 
+   2. Choose the `Name` field in the **Match by** picklist. 
+   3. Keep the **Trigger workflow rules and processes?** checkbox unchecked
+5. Under the **Where is your data located?** section,
+   1. Drop the [FAFSA Deadlines CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Deadlines.csv) you have downloaded in the designated place on the page 
+   2. Alternatively, click on the **CSV** icon to locate specify the file from your local drive
+6. On the next step, review the field mappings. _There should be no need to edit as the CSV file headers match the custom object field labels._ Click **Next** and start the import.
+
+### Knowledge Articles
+
+#### Load Knowledge Articles
+Use the **Salesforce Data Loader** to insert or upsert [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv) into the Knowledge object (`Knowledge__kav`).
+
+Notes: 
+1. You have to install the  **Salesforce Data Loader** on your machine.
+2. You must download the [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv)
+3. You must create and activate the data categories and groups below before uploading. They API names below match the CSV file values in the `datacategorygroup.FAFSA` column:
+   1. `FAFSA` data category group, under which are the data categories below
+   2. `Form_Questions`
+   3. `Terminology`
+4. If existing Knowledge Articles conflict with the CSV entries, archive the existing articles first using the **Knowledge** item in the Salesforce Lightning experience UI. Note: the **Knowledge** item is usually included in the **Service** and **Service Console** apps
+
+#### Publish the Knowledge Articles
+Knowledge Articles from the [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv) load as **draft** articles. They must be published in order to be consumed by the FAFSA Bot. Use the **Knowledge** item in the Salesforce Lightning experience UI to publish the articles.
+
+#### (Re)Train the Bot to Use Latest Knowledge Articles
+After articles have been published, the bot has to learn about them. This happens on schedule but it can also be initiated manually.
+1. Using the Salesforce Lightning experience UI, go to **Setup -> Feature Settings -> Service -> Service Cloud Einstein -> Einstein Bots** or search for "bot" in **Setup -> Quick Find** and click **Einstein Bots** to bring up the **Einstein Bots** page.
+2. On the **Einstein Bots** page click on the **Refresh** button under the **Article Answers** section (see image below). This should initiate the bot training, which could take hours, depending on the number of articles.
+3. On the same page, make sure the **Article Field Mappings** section specify that
+   - **Question** maps to the `Title` `Knowledge` object field
+   - **Answer** maps to the `Summary` `Knowledge` object field
+4. On the same page, make sure the **Knowledge Data Category Segments** indicate that the bot version you want to use, include all the data categories and groups you want to bot to know about. For example,
+   1. `FAFSA` data category group that includes the data categories below
+   2. `Form_Questions` data category
+   3. `Terminology` data category
+
+![Einstein Bot Article Answers Settings](./images/FAFSABot-ArticleAnswersSettings.png)
+ 
+
+
 ## Work Around Current Issues
 ### Work around [Issue #34](https://github.com/Salesforce-org-Impact-Labs/FinAid/issues/34)
 #### Issue Summary
@@ -19,7 +68,7 @@ Reconfigure the bot to set the **Bot User** setting to a **Custom Chatbot User**
 To get to the page shown in the image above,
 1. Go to **Setup -> Feature Settings -> Service -> Service Cloud Einstein -> Einstein Bots** or search for "bot" in **Setup -> Quick Find** and click **Einstein Bots" to bring up the **Einstein Bots** page
 2. On the **Eintein Bots** page, go to the **My Bots** section (_you may have to scroll down the page_) and click on the bot version you want to edit, e.g., **Version 3**. This brings up the **Einstein Bot Builder** page.
-3. On the **Einstein Bot Builder** page, bring up the **Overview** page using the pick list on the top left corner of the pagge. Set the **Bot User** setting to use a **Custom Chatbot User** and specify a user that has access to Knowledge.
+3. On the **Einstein Bot Builder** page, bring up the **Overview** page using the pick list on the top left corner of the page. Set the **Bot User** setting to use a **Custom Chatbot User** and specify a user that has access to Knowledge.
 
 ### Work around issue [Issue #36](https://github.com/Salesforce-org-Impact-Labs/FinAid/issues/36)
 #### Issue Summary
@@ -66,6 +115,6 @@ The action should be right after the **Was this useful?** question action of the
 ![Generate Knowledge Feedback Log](./images/FAFSABot-ArticleAnswers-GenerateKnowledgeFeedbackLog.png)
 
 To get to the page shown in the image above,
-1. Go to **Setup -> Feature Settings -> Service -> Service Cloud Einstein -> Einstein Bots** or search for "bot" in **Setup -> Quick Find** and click **Einstein Bots" to bring up the **Einstein Bots** page
-2. On the **Eintein Bots** page, go to the **My Bots** section and click on the FAFSA Bot version you want to edit, e.g., **Version 3**. This brings up the **Einstein Bot Builder** page.
+1. Go to **Setup -> Feature Settings -> Service -> Service Cloud Einstein -> Einstein Bots** or search for "bot" in **Setup -> Quick Find** and click **Einstein Bots** to bring up the **Einstein Bots** page
+2. On the **Einstein Bots** page, go to the **My Bots** section and click on the FAFSA Bot version you want to edit, e.g., **Version 3**. This brings up the **Einstein Bot Builder** page.
 3. On the **Einstein Bot Builder** page, switch to **Dialogs** using the pick list on the top left corner. Find the **Article Answers** dialog and click on it to edit it and add a **Generate Knowledge Feedback Log** action right after the the **Was this useful?** question action. NOTE: You have to deactivate the bot to edit.
