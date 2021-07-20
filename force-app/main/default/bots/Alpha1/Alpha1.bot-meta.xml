@@ -3,6 +3,97 @@
     <botMlDomain>
         <label>Alpha1</label>
         <mlIntents>
+            <developerName>FAFSA_Deadlines</developerName>
+            <label>Check a deadline date</label>
+            <mlIntentUtterances>
+                <utterance>Set Reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Add deadline reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Remind me about deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Add event</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Notify me about deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Create reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Add reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Add deadline</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Set deadline</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Create event</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Notify me about events</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Create deadline reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Create deadline notification</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Add deadline notification</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Get FAFSA deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Key FAFSA events</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Key events</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Tell me about deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>FAFSA deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Deadline reminder</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Get deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Help on deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Go to deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What are the federal deadlines?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Tell me about state deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Tell me about federal deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>state deadlines</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what are the federal deadlines</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
             <developerName>Key_Events_and_Deadlines</developerName>
             <label>Key Events and Deadlines</label>
             <mlIntentUtterances>
@@ -102,6 +193,7 @@
         </mlSlotClasses>
         <name>Alpha1</name>
     </botMlDomain>
+    <botUser>rtfinaid.bot@salesforce.com</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>LiveChatTranscript</SObjectType>
@@ -142,7 +234,7 @@
         <developerName>RoutableId</developerName>
         <label>Routable Id</label>
     </contextVariables>
-    <description>FAFSA bot explorations</description>
+    <description>FAFSA Bot Sprint 3</description>
     <label>FAFSA Bot</label>
     <logPrivateConversationData>true</logPrivateConversationData>
 </Bot>

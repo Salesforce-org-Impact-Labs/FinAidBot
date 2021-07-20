@@ -5,6 +5,7 @@
     <columns>State__c</columns>
     <columns>State_Abbreviated__c</columns>
     <columns>Deadline__c</columns>
+    <columns>Deadline_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>
