@@ -17,16 +17,20 @@ Use the **Salesforce Data Import Wizard** to import the [FAFSA Deadlines CSV dat
 ### Knowledge Articles
 
 #### Load Knowledge Articles
-Use the **Salesforce Data Loader** to insert or upsert [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv) into the Knowledge object (`Knowledge__kav`).
-
-Notes: 
-1. You have to install the  **Salesforce Data Loader** on your machine.
-2. You must download the [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv)
-3. You must create and activate the data categories and groups below before uploading. They API names below match the CSV file values in the `datacategorygroup.FAFSA` column:
+Use the **Import Articles**  utility to insert or upsert [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv) into the Knowledge object (`Knowledge__kav`).
+ 
+1. Download the following and zip them together in a single zip file
+   1. [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv)
+   2. [FAFSA Knowledge Import.properties](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Import.properties)
+2. If necessary, create and activate the data categories and groups below before uploading. Their API names must match the CSV file values in the `datacategorygroup.FAFSA` column:
    1. `FAFSA` data category group, under which are the data categories below
    2. `Form_Questions`
    3. `Terminology`
-4. If existing Knowledge Articles conflict with the CSV entries, archive the existing articles first using the **Knowledge** item in the Salesforce Lightning experience UI. Note: the **Knowledge** item is usually included in the **Service** and **Service Console** apps
+3. If existing Knowledge Articles conflict with the CSV entries, archive the existing articles first using the **Knowledge** item in the Salesforce Lightning experience UI. Note: the **Knowledge** item is usually included in the **Service** and **Service Console** apps
+4. Using the Salesforce Lightning experience UI, go to **Setup -> Data -> Import Articles** or search for "article" in Setup's Quick Find box and click on **Import Articles**. This should bring up the **Import Articles** page.
+5. On the **Import Articles** page, step 4,
+   1. Select **Knowledge** in the **Knowledge Base** drop down box 
+   2. Choose the zip file you created in step 1.
 
 #### Publish the Knowledge Articles
 Knowledge Articles from the [FAFSA Knowledge Articles CSV dataset](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Knowledge%20Articles.csv) load as **draft** articles. They must be published in order to be consumed by the FAFSA Bot. Use the **Knowledge** item in the Salesforce Lightning experience UI to publish the articles.
@@ -45,6 +49,15 @@ After articles have been published, the bot has to learn about them. This happen
 
 ![Einstein Bot Article Answers Settings](./images/FAFSABot-ArticleAnswersSettings.png)
  
+### Utterances
+Use the **Salesforce Data Loader** to insert or upsert the utterances datasets below into Intent Utterance object (`MIIntentUtterance`). Note that the CSV Heading `MlDomainName` = Bot's API name, `Alpha1`
+
+1. [FAFSA Bot Utterances - Application Questions.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Application%20Questions.csv). Applies to the bot  `FAFSA_Application_Form_Question` dialog (Get help with a question on the FAFSA application)
+2. [FAFSA Bot Utterances - Deadlines.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Deadlines.csv). Applies to the `Key_Events_and_Deadlines` dialog (Check a deadline date)
+3. [FAFSA Bot Utterances - Eligibility.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Eligibility.csv). Applies to the `FAFSA_Eligibility` dialog (Learn if I qualify for financial aid)
+4. [FAFSA Bot Utterances - Terminology.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Terminology.csv). Applies to the `FAFSA_Words` dialog (Understand what a FAFSA word means)
+
+Note: make sure the dialogs referenced above are intent-enabled before uploading the data set.
 
 
 ## Work Around Current Issues
