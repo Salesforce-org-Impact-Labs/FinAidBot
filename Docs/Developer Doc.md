@@ -50,7 +50,7 @@ After articles have been published, the bot has to learn about them. This happen
 ![Einstein Bot Article Answers Settings](./images/FAFSABot-ArticleAnswersSettings.png)
  
 ### Utterances
-Use the **Salesforce Data Loader** to insert or upsert the utterances datasets below into Intent Utterance object (`MIIntentUtterance`). Note that the CSV Heading `MlDomainName` = Bot's API name, `Alpha1`
+Use the **Salesforce Data Loader** to insert or upsert the utterances datasets below into the Intent Utterance object (`MIIntentUtterance`). Note that the CSV Heading `MlDomainName` = Bot's API name, `Alpha1`
 
 1. [FAFSA Bot Utterances - Application Questions.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Application%20Questions.csv). Applies to the bot  `FAFSA_Application_Form_Question` dialog (Get help with a question on the FAFSA application)
 2. [FAFSA Bot Utterances - Deadlines.csv](https://github.com/Salesforce-org-Impact-Labs/FinAid/blob/main/datasets/FAFSA%20Bot%20Utterances%20-%20Deadlines.csv). Applies to the `Key_Events_and_Deadlines` dialog (Check a deadline date)
