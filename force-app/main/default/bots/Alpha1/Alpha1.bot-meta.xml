@@ -895,7 +895,6 @@
         </mlSlotClasses>
         <name>Alpha1</name>
     </botMlDomain>
-    <botUser>test-4jikjwxwvxr5@example.com</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>LiveChatTranscript</SObjectType>
