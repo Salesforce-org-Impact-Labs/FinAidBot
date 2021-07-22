@@ -31,6 +31,8 @@
         <description>Version of the dialog used with V3 of the bot. Implements the conversation experience design spec.</description>
         <developerName>Key_Events_and_Deadlines</developerName>
         <label>Check a deadline date</label>
+        <mlIntent>Key_Events_and_Deadlines</mlIntent>
+        <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -212,37 +214,6 @@
             <type>VariableOperation</type>
         </botSteps>
         <botSteps>
-            <botInvocation>
-                <invocationActionName>generateKnowledgeLogData</invocationActionName>
-                <invocationActionType>logFeedback</invocationActionType>
-                <invocationMappings>
-                    <parameterName>input</parameterName>
-                    <type>Input</type>
-                    <variableName>_AnswerInput</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>results</parameterName>
-                    <type>Input</type>
-                    <variableName>_AnswerResults</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>selectedResult</parameterName>
-                    <type>Input</type>
-                    <variableName>AnswerSelectedResult</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-                <invocationMappings>
-                    <parameterName>feedback</parameterName>
-                    <type>Input</type>
-                    <variableName>AnswerFeedback</variableName>
-                    <variableType>ConversationVariable</variableType>
-                </invocationMappings>
-            </botInvocation>
-            <type>Invocation</type>
-        </botSteps>
-        <botSteps>
             <botStepConditions>
                 <leftOperandName>AnswerFeedback</leftOperandName>
                 <leftOperandType>ConversationVariable</leftOperandType>
@@ -310,6 +281,8 @@
         <description>Eligibility dialog per FAFSA conversation experience design document.</description>
         <developerName>FAFSA_Eligibility</developerName>
         <label>Learn if I qualify for financial aid</label>
+        <mlIntent>FAFSA_Eligibility</mlIntent>
+        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -335,9 +308,11 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Clone of Article Answers (Beta) can be used instead of the FAFSA Terms dialog. Customized for Impact Labs FinAid Bot</description>
+        <description>Uses Article Answers (Beta)</description>
         <developerName>FAFSA_Words</developerName>
         <label>Understand what a FAFSA word means</label>
+        <mlIntent>FAFSA_Words</mlIntent>
+        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -451,6 +426,8 @@
         <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
         <developerName>FAFSA_Application_Form_Question</developerName>
         <label>Get help with a question on the FAFSA application</label>
+        <mlIntent>FAFSA_Application_Form_Question</mlIntent>
+        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -463,7 +440,7 @@
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>You can also find additional information and details about these deadlines on our website:  https://studentaid.gov/apply-for-aid/fafsa</message>
+                <message>You can also find additional information and details about these deadlines on the FAFSA website:  https://studentaid.gov/apply-for-aid/fafsa</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -501,7 +478,7 @@
             </botStepConditions>
             <botSteps>
                 <botMessages>
-                    <message>Alright. Click on the following link to schedule your reminder.</message>
+                    <message>Alright. Click on the following link to schedule your reminder: https://isvsi-14ddd2ecd93-17863866d4-17a352cf55d.force.com/student/apex/VF_DeadlineCalendarDownload?scode=FD</message>
                 </botMessages>
                 <type>Message</type>
             </botSteps>

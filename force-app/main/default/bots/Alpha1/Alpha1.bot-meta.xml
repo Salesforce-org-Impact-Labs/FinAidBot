@@ -3,6 +3,212 @@
     <botMlDomain>
         <label>Alpha1</label>
         <mlIntents>
+            <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
+            <developerName>FAFSA_Application_Form_Question</developerName>
+            <label>Get help with a question on the FAFSA application</label>
+            <mlIntentUtterances>
+                <utterance>Can this question be clarified?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What’s another way to ask this?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you simplify the question ?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this question mena? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does question mean? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does question mean by? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you explain question number</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does question # mean</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does question number mean? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t understand question </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>don&apos;t understand question number</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is question number asking for? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Dont understand question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Need clarification on question?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this question mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is this question asking?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t understand this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I need help with a question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>More information about this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>FAFSA question clarification</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When FAFSA is asking</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Please clarify question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t get this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you explain this question?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I answer this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is answer to this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>can you please explain this question?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>can you elaborate on this question?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>help with question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>help with application question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t understand this question on the application</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do I put in the box on question </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Where do I find answers to question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>question clarification</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>understanding question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get help on section? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I skip this section?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I fill out this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I fill out this</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Need help filling out a question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Need help with application </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Application help</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>fafsa question help</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I have a question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Question on FAFSA application</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is this question asking for?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get more information on question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get more information on application</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you help me with question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I fill this out?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do I need to do in this question?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I answer this question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I answer</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Answer to question number</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Help with question number</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you help me fill out this?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I&apos;m not sure what to write here</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do you need me to do here on this form</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What should I fill in here?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>More information on question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Common responses for question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Help me, how do I fill this out</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t know what to write here</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Where do I find information to fill out this question? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>guidance on question</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What exactly are you looking for for this question?</utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
             <developerName>FAFSA_Deadlines</developerName>
             <label>Check a deadline date</label>
             <mlIntentUtterances>
@@ -94,94 +300,590 @@
             </mlIntentUtterances>
         </mlIntents>
         <mlIntents>
+            <description>Eligibility dialog per FAFSA conversation experience design document.</description>
+            <developerName>FAFSA_Eligibility</developerName>
+            <label>Learn if I qualify for financial aid</label>
+            <mlIntentUtterances>
+                <utterance>Can I get financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How to qualify for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How to get financial assistance?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Get help paying for school</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>do I qualify for assistance</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how do I know if I qualify</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I need financial assistance</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I qualify?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What are the requirements for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify for assistance?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I get FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Where can I check to see if I am eligible for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Where can I check to see if I am eligible for FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify for assistance?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Am I eligible?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I get financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How can I find out if I qualify?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify for financial assistance?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Do I qualify for assistance?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get scholarships?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I qualify?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how do I know if I am eligible for financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how can I qualify for financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what&apos;s the criteria to qualify for financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how can I qualify for federal financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Help with qualifying for financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I get financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Does my income level qualify me for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>qualify if I have a part-time job?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>financial aid eligibility criteria</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>am I eligible for financial aid at</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What’s needed to be eligible?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get FAFSA aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I can get federal student aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Am I eligible for student aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get federal student aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>fafsa eligibility</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>am I eligible for financial aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Am I eligible for FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do I have to do to apply for FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I am eligible?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how do I know if I&apos;m eligible for financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can I get financial aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I know if I am eligible to receive aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I get aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>am I eligible for aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what makes me eligible for aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>how do I know if I&apos;m eligible for federal aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Eligibility for federal aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Ability to get aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>federal financial aid eligibility</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Eligibility guidelines for aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Qualifications for aid</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I get more money from the government?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Am I eligible for government grants or scholarships?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I get more money from the government?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>FAFSA criteria </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Government aid criteria </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>eligible for money from government </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Am I eligable for student aid?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>student financial aid criteria</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Hi! I am hoping to figure out what kind of loan I can get?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>are loans available to me? </utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
+            <description>Clone of Article Answers (Beta) can be used instead of the FAFSA Terms dialog. Customized for Impact Labs FinAid Bot</description>
+            <developerName>FAFSA_Words</developerName>
+            <label>Understand what a FAFSA word means</label>
+            <mlIntentUtterances>
+                <utterance>Hello, can you please clarify what this word is asking me to do?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you further explain what this word means?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What are other words that are similar to this one?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this word mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this term mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is the meaning of</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does word mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does term mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is word?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t know what this word means </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Not sure what this word means</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>please help, what does this word mean</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is this word?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Define this word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Definition of word from FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Don&apos;t understand what this means on the FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Need more information on word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does that mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Please clarify this term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do you mean by this term? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t know that term, what&apos;s that? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is the meaning of this word?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Word meaning</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what is word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What do you mean by</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you explain what you mean by</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t understand this term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you explain that term?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Where can I find more information on that word?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Explain?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Huh? I didn&apos;t get the word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Huh? I don&apos;t understand the word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is the definition of this word?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Term meaning</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what does that word mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Help &quot;term&quot;</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>More info on term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>More info on word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Glossary</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Dictionary</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what does this mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>explanation glossary</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Define term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Translate word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does word refer to? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>definitions glossary help!</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I don&apos;t know what this means</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Can you define this term? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I am a bit confused. What does this word mean?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this mean exactly?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>help me with this word</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>can you explain this confusing term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I&apos;m confused on this word </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>help me, I don&apos;t know what this means</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>help! I&apos;m confused on a term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>I&apos;m stuck on this term</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What does this FAFSA term mean? </utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>FAFSA glossary</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>fafsa dictionary </utterance>
+            </mlIntentUtterances>
+        </mlIntents>
+        <mlIntents>
             <developerName>Key_Events_and_Deadlines</developerName>
             <label>Key Events and Deadlines</label>
             <mlIntentUtterances>
-                <utterance>Set Reminder</utterance>
+                <utterance>When is the deadline for the FAFSA?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Add deadline reminder</utterance>
+                <utterance>When is the FAFSA due?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Remind me about deadlines</utterance>
+                <utterance>When should I finish the FAFSA?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Add event</utterance>
+                <utterance>What&apos;s the deadline for the FAFSA?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Notify me about deadlines</utterance>
+                <utterance>When do I need to send in my fafsa by?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Create reminder</utterance>
+                <utterance>What are the dates for fafsa?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Add reminder</utterance>
+                <utterance>what are the deadlines</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Add deadline</utterance>
+                <utterance>when do I need to complete this</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Set deadline</utterance>
+                <utterance>When is the deadline?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Create event</utterance>
+                <utterance>When is the application due?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Notify me about events</utterance>
+                <utterance>When do I need to submit?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Create deadline reminder</utterance>
+                <utterance>Deadline for FAFSA</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>deadlines</utterance>
+                <utterance>FAFSA deadline</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Create deadline notification</utterance>
+                <utterance>What is the FAFSA deadline 2021?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Add deadline notification</utterance>
+                <utterance>Important information about FAFSA</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Get FAFSA deadlines</utterance>
+                <utterance>When is FAFSA due? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Key FAFSA events</utterance>
+                <utterance>What&apos;s the deadline for this?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Key events</utterance>
+                <utterance>When do I need to submit the application?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Tell me about deadlines</utterance>
+                <utterance>When is FAFSA due</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>FAFSA deadlines</utterance>
+                <utterance>When is fafsa due</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Deadline reminder</utterance>
+                <utterance>When do I have to submit FAFSA</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Get deadlines</utterance>
+                <utterance>What is FAFSA due date</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Help on deadlines</utterance>
+                <utterance>when is the fafsa app due?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Go to deadlines</utterance>
+                <utterance>whats the due date of the fafsa app</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What are the federal deadlines?</utterance>
+                <utterance>when does the fafsa need to be completed by?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Tell me about state deadlines</utterance>
+                <utterance>Before what day should the fafsa be completed?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Tell me about federal deadlines</utterance>
+                <utterance>what&apos;s the last day I can submit the fasfa?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>state deadlines</utterance>
+                <utterance>Deadline for application</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>what are the federal deadlines</utterance>
+                <utterance>Due date for FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is my application due?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is the last day I can submit my application?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what is the deadline?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>cutoff date to appy</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is the last day to complete the form?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Last day I can ask for help?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Last day to turn in signatures?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to complete the FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to do the FAFSA?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What day do I need to send in my fafsa application?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When should I finish my fafsa by?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is the due date?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to complete this by?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When to submit FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>By when to complete the FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Final date to submit FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is the FAFSA deadline?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to finish?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When&apos;s the due date?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What&apos;s the last day to apply?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is this due?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How much time do I have to complete this?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is the last day to turn this in?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to finish FAFSA</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When do I need to comeplete this</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What is last day to finish this</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>what date will I need the fafsa done by?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>by what day should the fafsa be done</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>when should fafsa be completed by?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>Find FAFSA deadline</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>How do I find the FAFSA deadline</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When is FAFSA deadline?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>When to submit FAFSA form?</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>FAFSA due date</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>when is the FAFSA due</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>What deadlines do I need to know about?</utterance>
             </mlIntentUtterances>
         </mlIntents>
         <mlSlotClasses>
@@ -193,7 +895,6 @@
         </mlSlotClasses>
         <name>Alpha1</name>
     </botMlDomain>
-    <botUser>rtfinaid.bot@salesforce.com</botUser>
     <contextVariables>
         <contextVariableMappings>
             <SObjectType>LiveChatTranscript</SObjectType>
