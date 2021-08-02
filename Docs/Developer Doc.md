@@ -131,3 +131,43 @@ To get to the page shown in the image above,
 1. Go to **Setup -> Feature Settings -> Service -> Service Cloud Einstein -> Einstein Bots** or search for "bot" in **Setup -> Quick Find** and click **Einstein Bots** to bring up the **Einstein Bots** page
 2. On the **Einstein Bots** page, go to the **My Bots** section and click on the FAFSA Bot version you want to edit, e.g., **Version 3**. This brings up the **Einstein Bot Builder** page.
 3. On the **Einstein Bot Builder** page, switch to **Dialogs** using the pick list on the top left corner. Find the **Article Answers** dialog and click on it to edit it and add a **Generate Knowledge Feedback Log** action right after the the **Was this useful?** question action. NOTE: You have to deactivate the bot to edit.
+
+### Work around issue [Issue #41](https://github.com/Salesforce-org-Impact-Labs/FinAidBot/issues/41)
+#### Issue Summary
+When deploying an Einstein Bot with a dialog that has a **Question** step setting configured as follows:
+``` 
+If the variable already contains a value:
+   [ ] Skip question and use existing value
+   [x] Ask question and overwrite the value
+```
+the setting reverted back to the following after deployment:
+``` 
+If the variable already contains a value:
+   [x] Skip question and use existing value
+   [ ] Ask question and overwrite the value
+```
+
+#### Work-Around
+This work-around requires knowing the **Question** step setting as it was configured during development. This requires coordiation with the developer as there is no good way of knowing this from GitHub. 
+
+##### Post-Deployment
+For every dialog that has a **Question** step, restore the setting as it was configured during development:
+``` 
+If the variable already contains a value:
+   [ ] Skip question and use existing value
+   [x] Ask question and overwrite the value
+```
+
+Currently, this applies to the following dialogs:
+1. Article Answers (API name: `Answer_Automation`)
+   1. Question _I found the following articles_
+3. Can I assist you with anything else? (API name: `FAFSA_Anything_Else`)
+   1. Question _Can I assist you with anything else?_
+4. Federal deadline for 2021-22 (API name: `Federal_deadline_for_2021_22`)
+   1. Question _Would you like to create a calendar reminder for the Federal Deadline?_
+6. My college's deadline for 2021-22 (API name: `My_college_s_deadline_for_2021_22`)
+   1. Question _Which college do you want to check the deadline for?_
+   2. Question _Do you want to check another college's deadline?_
+7. My state's deadline for 2021-22 (API name: `My_state_s_deadline_for_2021_22`)
+   1. Question _What state do you want to check the deadline for?_
+   2. Question _o you want to check another state's deadline?_
