@@ -30,7 +30,7 @@
         </botSteps>
         <description>Version of the dialog used with V3 of the bot. Implements the conversation experience design spec.</description>
         <developerName>Key_Events_and_Deadlines</developerName>
-        <label>Check a deadline date</label>
+        <label>Check deadline dates for FAFSA</label>
         <mlIntent>Key_Events_and_Deadlines</mlIntent>
         <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -38,7 +38,7 @@
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Hi! I&apos;m FAFSA Bot, a digital assistant. I&apos;m here to help you with your questions while you fill out your FAFSA form.</message>
+                <message>Hi! I&apos;m FinAid Chatbot, a digital assistant. I&apos;m here to help you with your questions while you fill out your FAFSA form.</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -99,7 +99,9 @@
         </botSteps>
         <developerName>Transfer_To_Agent</developerName>
         <label>Transfer To Agent</label>
-        <showInFooterMenu>false</showInFooterMenu>
+        <mlIntent>Transfer_To_Agent</mlIntent>
+        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
+        <showInFooterMenu>true</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
@@ -157,7 +159,7 @@
         <botSteps>
             <botVariableOperation>
                 <botMessages>
-                    <message>I found the following articles</message>
+                    <message>I found the following information</message>
                 </botMessages>
                 <botVariableOperands>
                     <disableAutoFill>true</disableAutoFill>
@@ -280,7 +282,7 @@
         </botSteps>
         <description>Eligibility dialog per FAFSA conversation experience design document.</description>
         <developerName>FAFSA_Eligibility</developerName>
-        <label>Learn if I qualify for financial aid</label>
+        <label>Learn if I qualify for FAFSA</label>
         <mlIntent>FAFSA_Eligibility</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -310,7 +312,7 @@
         </botSteps>
         <description>Uses Article Answers (Beta)</description>
         <developerName>FAFSA_Words</developerName>
-        <label>Understand what a FAFSA word means</label>
+        <label>Get help understanding financial terms</label>
         <mlIntent>FAFSA_Words</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -425,7 +427,7 @@
         </botSteps>
         <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
         <developerName>FAFSA_Application_Form_Question</developerName>
-        <label>Get help with a question on the FAFSA application</label>
+        <label>Get help filling out the FAFSA application</label>
         <mlIntent>FAFSA_Application_Form_Question</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
