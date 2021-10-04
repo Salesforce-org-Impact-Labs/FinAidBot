@@ -161,7 +161,6 @@
     </nameField>
     <pluralLabel>FAFSA Deadline</pluralLabel>
     <searchLayouts>
-        <listViewButtons>Delete</listViewButtons>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
