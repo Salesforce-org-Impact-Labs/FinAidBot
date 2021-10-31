@@ -40,3 +40,22 @@ flows:
                 task: load_dataset
                 options:
                     set_recently_viewed: 0
+
+    customer_org_minimal:
+        description: Installation flow used by MetaDeploy installer.
+        steps:
+          1: 
+            task: deploy
+            options:
+              path: force-app/
+            ui_options:
+              name: "Install Financial Aid Chatbot"
+
+    customer_org:
+        steps:
+          1:
+            flow: dependencies
+          2:
+            flow: customer_org_minimal
+
+            
