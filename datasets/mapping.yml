@@ -4,6 +4,7 @@ Insert FAFSA_Deadline__c:
   fields:
     Name: Name
     State__c: State__c
+    State_Abbreviated__c: State_Abbreviated__c
     Deadline__c: Deadline__c
 Insert Knowledge__kav:
   sf_object: Knowledge__kav
