@@ -16,13 +16,13 @@
                 <utterance>Can you simplify the question ?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does this question mena?</utterance>
+                <utterance>What does this question mena? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does question mean?</utterance>
+                <utterance>What does question mean? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does question mean by?</utterance>
+                <utterance>What does question mean by? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Can you explain question number</utterance>
@@ -31,16 +31,16 @@
                 <utterance>What does question # mean</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does question number mean?</utterance>
+                <utterance>What does question number mean? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>I don&apos;t understand question</utterance>
+                <utterance>I don&apos;t understand question </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>don&apos;t understand question number</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What is question number asking for?</utterance>
+                <utterance>What is question number asking for? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Dont understand question</utterance>
@@ -100,7 +100,7 @@
                 <utterance>I don&apos;t understand this question on the application</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What do I put in the box on question</utterance>
+                <utterance>What do I put in the box on question </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Where do I find answers to question</utterance>
@@ -112,7 +112,7 @@
                 <utterance>understanding question</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Can I get help on section?</utterance>
+                <utterance>Can I get help on section? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Can I skip this section?</utterance>
@@ -127,7 +127,7 @@
                 <utterance>Need help filling out a question</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Need help with application</utterance>
+                <utterance>Need help with application </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Application help</utterance>
@@ -199,7 +199,7 @@
                 <utterance>I don&apos;t know what to write here</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Where do I find information to fill out this question?</utterance>
+                <utterance>Where do I find information to fill out this question? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>guidance on question</utterance>
@@ -481,13 +481,13 @@
                 <utterance>How do I get more money from the government?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>FAFSA criteria</utterance>
+                <utterance>FAFSA criteria </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Government aid criteria</utterance>
+                <utterance>Government aid criteria </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>eligible for money from government</utterance>
+                <utterance>eligible for money from government </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Am I eligable for student aid?</utterance>
@@ -499,7 +499,7 @@
                 <utterance>Hi! I am hoping to figure out what kind of loan I can get?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>are loans available to me?</utterance>
+                <utterance>are loans available to me? </utterance>
             </mlIntentUtterances>
         </mlIntents>
         <mlIntents>
@@ -534,7 +534,7 @@
                 <utterance>What is word?</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>I don&apos;t know what this word means</utterance>
+                <utterance>I don&apos;t know what this word means </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>Not sure what this word means</utterance>
@@ -564,10 +564,10 @@
                 <utterance>Please clarify this term</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What do you mean by this term?</utterance>
+                <utterance>What do you mean by this term? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>I don&apos;t know that term, what&apos;s that?</utterance>
+                <utterance>I don&apos;t know that term, what&apos;s that? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>What is the meaning of this word?</utterance>
@@ -642,7 +642,7 @@
                 <utterance>Translate word</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does word refer to?</utterance>
+                <utterance>What does word refer to? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>definitions glossary help!</utterance>
@@ -651,7 +651,7 @@
                 <utterance>I don&apos;t know what this means</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>Can you define this term?</utterance>
+                <utterance>Can you define this term? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>I am a bit confused. What does this word mean?</utterance>
@@ -666,7 +666,7 @@
                 <utterance>can you explain this confusing term</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>I&apos;m confused on this word</utterance>
+                <utterance>I&apos;m confused on this word </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>help me, I don&apos;t know what this means</utterance>
@@ -678,13 +678,13 @@
                 <utterance>I&apos;m stuck on this term</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>What does this FAFSA term mean?</utterance>
+                <utterance>What does this FAFSA term mean? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>FAFSA glossary</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>fafsa dictionary</utterance>
+                <utterance>fafsa dictionary </utterance>
             </mlIntentUtterances>
         </mlIntents>
         <mlIntents>
@@ -736,7 +736,7 @@
                 <utterance>Important information about FAFSA</utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
-                <utterance>When is FAFSA due?</utterance>
+                <utterance>When is FAFSA due? </utterance>
             </mlIntentUtterances>
             <mlIntentUtterances>
                 <utterance>What&apos;s the deadline for this?</utterance>
@@ -942,4 +942,5 @@
     <description>FAFSA Bot Sprint 3</description>
     <label>Financial Aid Advisor</label>
     <logPrivateConversationData>true</logPrivateConversationData>
+    <richContentEnabled>false</richContentEnabled>
 </Bot>

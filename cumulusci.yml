@@ -9,6 +9,12 @@ project:
     source_format: sfdx
 
 tasks:
+    retrieve_config_dev:
+        description: Retrieves the current changes in the scratch org into unpackaged/config/dev
+        class_path: cumulusci.tasks.salesforce.sourcetracking.RetrieveChanges
+        options:
+            path: unpackaged/config/dev
+            namespace_tokenize: $project_config.project__package__namespace
     robot:
         options:
             suites: robot/FinAid/tests
@@ -58,4 +64,3 @@ flows:
           2:
             flow: customer_org_minimal
 
-            

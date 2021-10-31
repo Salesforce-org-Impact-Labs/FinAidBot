@@ -158,6 +158,8 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
+                <autoSelectIfSingleChoice>false</autoSelectIfSingleChoice>
                 <botMessages>
                     <message>I found the following information</message>
                 </botMessages>
@@ -192,6 +194,7 @@
         </botSteps>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Was this useful?</message>
                 </botMessages>
@@ -337,6 +340,7 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Can I assist you with anything else?</message>
                 </botMessages>
@@ -448,6 +452,7 @@
         </botSteps>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Would you like to create a calendar reminder for the Federal Deadline?</message>
                 </botMessages>
@@ -503,6 +508,7 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Which college do you want to check the deadline for?</message>
                 </botMessages>
@@ -569,6 +575,7 @@
         </botSteps>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Do you want to check another college&apos;s deadline?</message>
                 </botMessages>
@@ -642,6 +649,7 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>What state do you want to check the deadline for?</message>
                 </botMessages>
@@ -734,6 +742,7 @@
         </botSteps>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>Do you want to check another state&apos;s deadline?</message>
                 </botMessages>
@@ -821,6 +830,7 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botVariableOperation>
+                <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
                     <message>OK, no problem. Would you like to learn about how FAFSA deadlines work?</message>
                 </botMessages>
