@@ -9,12 +9,6 @@ project:
     source_format: sfdx
 
 tasks:
-    retrieve_config_dev:
-        description: Retrieves the current changes in the scratch org into unpackaged/config/dev
-        class_path: cumulusci.tasks.salesforce.sourcetracking.RetrieveChanges
-        options:
-            path: unpackaged/config/dev
-            namespace_tokenize: $project_config.project__package__namespace
     robot:
         options:
             suites: robot/FinAid/tests
@@ -60,7 +54,30 @@ flows:
     customer_org:
         steps:
           1:
-            flow: dependencies
-          2:
             flow: customer_org_minimal
 
+plans:
+    install:
+        slug: install
+        title: Install Financial Aid Chatbot
+        tier: primary
+        is_listed: True
+        preflight_message: "This installs the Financial Aid Chatbot into your org."
+        post_install_message: "Thanks for installing Financial Aid Chatbot. Visit the [Student Success Hub topic](https://powerofus.force.com/s/topic/0TO1E000000E9yLWAS/student-success-hub) on the Power of Us Hub for any questions about Student Success Hub."
+        error_message: "If you experience an issue with the installation, please post in the [Power of Us Hub] (https://powerofus.force.com/s/topic/0TO1E000000E9yLWAS/student-success-hub)."
+        checks:
+            # Omni-Channel
+            - when: "'ServiceChannel' not in tasks.check_sobjects_available()"
+              action: error
+              message: "OmniChannel must be enabled in your org before installation."
+            - when: '"sfdc_chatbot_service_permset" not in tasks.get_available_permission_sets()'
+              action: error
+              message: "Einstein Bots must be enabled in your org before installation."
+            # Messaging is enabled  
+            - when: "'LiveMessageUserPsl' not in tasks.get_available_permission_set_licenses()"
+              action: error
+              message: "Messaging must be enabled in your org before installation."
+
+        steps:
+            1:
+                flow: customer_org_minimal
