@@ -308,7 +308,7 @@ FAFSA Question 103,"Question 103 is your signature and, if you completed Step Fo
 FAFSA Question 104,"If someone was paid to help you prepare this form, they must fill out this information. You don't need to do it!",FAFSA-Question-104,Form_Questions
 FAFSA Question 105,"If someone was paid to help you prepare this form, they must fill out this section. You don't need to do it!",FAFSA-Question-105,Form_Questions
 FAFSA Question 106,"If someone was paid to help you prepare this form, they must fill out this information. You don't need to do it!",FAFSA-Question-106,Form_Questions
-[INSTITUTION] FAFSA Deadline,"Please turn in your FAFSA form to [LOCATION] by [DATE].
+[INSTITUTION] FAFSA Deadline 2021,"Please turn in your FAFSA form to [LOCATION] by [DATE].
 
 Note to Admin: Please update this response based on your institution's specific deadline.",[INSTITUTION]-FAFSA-Deadline,Terminology
 Education Level,"If you are an American citizen, you are eligible for aid if you have received a high school diploma, received a General Educational Development (GED) certificate, or completed a high school education in a homeschool setting approved under law for your state.",Education-Level,Terminology
@@ -318,3 +318,18 @@ Social Security Number,"To receive federal student aid, you must have a valid So
 
 If you are from the Republic of the Marshall Islands, Federated States of Micronesia, or the Republic of Palau, you do not need a valid Social Security number.",Social-Security-Number,Terminology
 Approved use of money,"When you complete the FAFSA, you sign a statement to certify you will use any money you get from federal student aid for educational purposes only and that you do not already owe money, due to a grant refund or another federal student loan going into default. This statement is in Step Seven",Approved-use-of-money,Terminology
+Federal FAFSA Deadline 2021,"Your FAFSA form is bound to the academic year you are in. If you start your academic year in August or September, the federal deadline for your FAFSA is the following year on June 30.",Federal-FAFSA-Deadline-2021,FAFSA_Deadline
+Alabama State FAFSA Deadline 2021, "Check with your financial aid administrator.",Alabama-FAFSA-Deadline-2021,FAFSA_Deadline 
+Alaska State FAFSA Deadline 2021,"Alaska Education Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted
+Alaska Performance Scholarship: For priority consideration, submit your application by June 30, 2021. Awards are made until funds are depleted.",Alaska-FAFSA-Deadline-2021,FAFSA_Deadline
+American Samoa FAFSA Deadline 2021,"Check with your financial aid administrator. Additional forms might be required.",American-Samoa-FAFSA-Deadline-2021,FAFSA_Deadline
+Arizona State FAFSA Deadline 2021,"Check with your financial aid administrator.",Arizona-FAFSA-Deadline-2021,FAFSA_Deadline
+Arkansas State FAFSA Deadline 2021,"Academic Challenge: July 1, 2021, by midnight CT.
+ArFuture Grant (fall term): July 1, 2021, by midnight CT.
+ArFuture Grant (spring term): Jan. 10, 2022, by midnight CT.",Arkansas-FAFSA-Deadline-2021,FAFSA_Deadline
+California State FAFSA Deadline 2021,"For many state financial aid programs: March 2, 2021 (date postmarked).
+Cal Grant also requires submission of a school-certified GPA by March 2, 2021.
+For additional community college Cal Grants: Sept. 2, 2021 (date postmarked)
+If you’re a noncitizen without a Social Security card or had one issued through the federal Deferred Action for Childhood Arrivals program, you should fill out the California Dream Act Application found at dream.csac.ca.gov. Contact the California Student Aid Commission csac.ca.gov or your financial aid administrator for more information.",California-FAFSA-Deadline-2021,FAFSA_Deadline
+Colorado State FAFSA Deadline 2021,"Check with your financial aid administrator.",Colorado-FAFSA-Deadline-2021,FAFSA_Deadline
+Connecticut State FAFSA Deadline 2021,"For priority consideration, submit your application by midnight CT, Feb. 15, 2021. Additional forms might be required. Contact your financial aid administrator or your state agency.",Connecticut-FAFSA-Deadline-2021,FAFSA_Deadline

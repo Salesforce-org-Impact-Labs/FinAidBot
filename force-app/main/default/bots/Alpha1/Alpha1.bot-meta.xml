@@ -890,6 +890,14 @@
             <developerName>Transfer_To_Agent</developerName>
             <label>Transfer To Agent</label>
         </mlIntents>
+        <mlIntents>
+            <developerName>My_college_s_deadline_for_2021_22</developerName>
+            <label>My college&apos;s deadline</label>
+        </mlIntents>
+        <mlIntents>
+            <developerName>My_states_s_deadline_for_2021_22</developerName>
+            <label>My state&apos;s deadline</label>
+        </mlIntents>
         <mlSlotClasses>
             <dataType>Text</dataType>
             <description>State abbreviation or name</description>
@@ -939,7 +947,7 @@
         <developerName>RoutableId</developerName>
         <label>Routable Id</label>
     </contextVariables>
-    <description>FAFSA Bot Sprint 3</description>
+    <description>FAFSA Bot</description>
     <label>Financial Aid Advisor</label>
     <logPrivateConversationData>true</logPrivateConversationData>
     <richContentEnabled>false</richContentEnabled>

@@ -36,10 +36,6 @@ flows:
         steps:
             3:
                 task: add_knowledge_user_to_system_admin
-            4:
-                task: load_dataset
-                options:
-                    set_recently_viewed: 0
 
     customer_org_minimal:
         description: Installation flow used by MetaDeploy installer.

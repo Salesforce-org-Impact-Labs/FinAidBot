@@ -581,362 +581,67 @@
             <type>Navigation</type>
         </botSteps>
         <developerName>Federal_deadline_for_2021_22</developerName>
-        <label>Federal deadline for 2021-22</label>
+        <label>Federal deadline</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
-            <botVariableOperation>
-                <askCollectIfSet>true</askCollectIfSet>
-                <botMessages>
-                    <message>Which college do you want to check the deadline for?</message>
-                    <messageIdentifier>2acff0d4-e1a8-4a28-947f-e76e5cf600e6</messageIdentifier>
-                </botMessages>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>State</sourceName>
-                    <sourceType>MlSlotClass</sourceType>
-                    <targetName>State</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-                <variableOperationIdentifier>4ee5e1c3-a6db-4a5a-9a68-9cd236061801</variableOperationIdentifier>
-            </botVariableOperation>
-            <stepIdentifier>0ab6a80b-d948-4c8c-bb39-a4f9ddbb1694</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <botInvocation>
-                    <invocationActionName>FAFSA_Bot_Lookup_FAFSA_Deadline</invocationActionName>
-                    <invocationActionType>flow</invocationActionType>
-                    <invocationMappings>
-                        <parameterName>State</parameterName>
-                        <type>Input</type>
-                        <variableName>State</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>Deadline</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Matched_FAFSA_Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>FAFSA_Deadline_Record</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                </botInvocation>
-                <type>Set</type>
-                <variableOperationIdentifier>2f38d282-33a2-4ce5-8c64-c21af2831762</variableOperationIdentifier>
-            </botVariableOperation>
-            <stepIdentifier>3b709665-f322-4207-9896-710db40d1dc3</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botMessages>
-                    <message>{!State} - {!Deadline}</message>
-                    <messageIdentifier>f1cff3af-3106-499d-bf4f-12a802dd5cf2</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>f17ff140-f449-473d-9b0a-6f8ad48e1764</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <stepIdentifier>fef46527-eb51-4a1d-a03a-20bb89dbfa78</stepIdentifier>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
             <botMessages>
-                <message>College FAFSA deadlines are usually early and can differ by school. If you didn&apos;t see the deadline above you should search online for their most up-to-date deadline date.</message>
+                <message>College FAFSA deadlines are usually early and can differ by school. If you cannot find your college's deadline you should search online for their most up-to-date deadline date.</message>
                 <messageIdentifier>a8dbff84-b3aa-4f6e-98d3-47df02acea00</messageIdentifier>
             </botMessages>
             <stepIdentifier>96fb2a61-5c23-49d6-90b4-5c7eab6e821c</stepIdentifier>
             <type>Message</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <askCollectIfSet>true</askCollectIfSet>
-                <botMessages>
-                    <message>Do you want to check another college&apos;s deadline?</message>
-                    <messageIdentifier>ed12d156-fc6d-4243-a9e2-dc09a7acbe77</messageIdentifier>
-                </botMessages>
-                <botQuickReplyOptions>
-                    <literalValue>Yes</literalValue>
-                    <quickReplyOptionIdentifier>bf6f6cab-2226-43f7-9164-5b1d86ff9309</quickReplyOptionIdentifier>
-                </botQuickReplyOptions>
-                <botQuickReplyOptions>
-                    <literalValue>No</literalValue>
-                    <quickReplyOptionIdentifier>4fd8ff3c-257b-4d41-abe2-26cc5178e7c2</quickReplyOptionIdentifier>
-                </botQuickReplyOptions>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Boolean</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>Another_college_deadline</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyType>Static</quickReplyType>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-                <variableOperationIdentifier>826f8fc1-4abc-439c-9db6-b99ece3fb02a</variableOperationIdentifier>
-            </botVariableOperation>
-            <stepIdentifier>b3c18480-c9e7-4816-9049-d5376b54a468</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Another_college_deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>Equals</operatorType>
-                <rightOperandValue>true</rightOperandValue>
-            </botStepConditions>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <stepIdentifier>dde654ca-9b3e-4cf1-8559-e43d2fadc830</stepIdentifier>
-                <type>Navigation</type>
-            </botSteps>
-            <stepIdentifier>146b70f9-34c2-477a-acde-40a58484aa76</stepIdentifier>
-            <type>Group</type>
-        </botSteps>
+        </botSteps>            
         <botSteps>
             <botMessages>
-                <message>Checking in: do you have more questions about FAFSA deadlines?</message>
-                <messageIdentifier>663e1f68-410c-4859-aa2d-e7bc80b907bb</messageIdentifier>
+                <message>Which college do you want to check the deadline for?</message>
+                <messageIdentifier>2acff0d4-e1a8-4a28-947f-e76e5cf600e6</messageIdentifier>
             </botMessages>
-            <stepIdentifier>136a3d92-9e5e-4767-a9d0-35d197b3de82</stepIdentifier>
+            <stepIdentifier>0ab6a80b-d948-4c8c-bb39-a4f9ddbb1694</stepIdentifier>
             <type>Message</type>
         </botSteps>
         <botSteps>
-            <botNavigation>
-                <botNavigationLinks>
-                    <targetBotDialog>Federal_deadline_for_2021_22</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
-                </botNavigationLinks>
-                <type>Redirect</type>
-            </botNavigation>
-            <stepIdentifier>c8133874-046a-4fd8-859a-9c9dac3a092b</stepIdentifier>
-            <type>Navigation</type>
+            <stepIdentifier>03cce2e7-1277-49ed-9924-ee24cc6a8efb</stepIdentifier>
+            <type>Wait</type>
         </botSteps>
         <developerName>My_college_s_deadline_for_2021_22</developerName>
-        <label>My college&apos;s deadline for 2021-22</label>
+        <label>My college&apos;s deadline</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
-            <botVariableOperation>
-                <askCollectIfSet>true</askCollectIfSet>
-                <botMessages>
-                    <message>What state do you want to check the deadline for?</message>
-                    <messageIdentifier>51d8890a-6343-4490-8f80-af404ba35967</messageIdentifier>
-                </botMessages>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Text</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>State</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-                <variableOperationIdentifier>3f893616-edd2-405b-9941-10ea3205c4d7</variableOperationIdentifier>
-            </botVariableOperation>
+            <botMessages>
+                <message>State deadlines are set by your home state and can vary by state. You can also check all the state deadlines halfway down the page at https://studentaid.gov/h/apply-for-aid/fafsa.</message>
+                <messageIdentifier>51d8890a-6343-4490-8f80-af404ba35967</messageIdentifier>
+            </botMessages>
             <stepIdentifier>f0b139ff-2a72-4126-92d7-6ebe35f51d95</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <botInvocation>
-                    <invocationActionName>FAFSA_Bot_Lookup_FAFSA_Deadline</invocationActionName>
-                    <invocationActionType>flow</invocationActionType>
-                    <invocationMappings>
-                        <parameterName>State</parameterName>
-                        <type>Input</type>
-                        <variableName>State</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>Deadline</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                    <invocationMappings>
-                        <parameterName>Matched_FAFSA_Deadline</parameterName>
-                        <type>Output</type>
-                        <variableName>FAFSA_Deadline_Record</variableName>
-                        <variableType>ConversationVariable</variableType>
-                    </invocationMappings>
-                </botInvocation>
-                <type>Set</type>
-                <variableOperationIdentifier>07c34b36-fdb1-492b-ad92-7441ec5232bd</variableOperationIdentifier>
-            </botVariableOperation>
-            <stepIdentifier>08911727-8482-47d6-8fac-09393c4b9983</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botMessages>
-                    <message>{!State} - {!Deadline}</message>
-                    <messageIdentifier>fc067aac-0751-4425-94ea-c8307bce9d65</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>03cce2e7-1277-49ed-9924-ee24cc6a8efa</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <botMessages>
-                    <message>These deadlines are set by your home state and can vary by state. You can check all the state deadlines halfway down the page at https://studentaid.gov/h/apply-for-aid/fafsa.</message>
-                    <messageIdentifier>1675074b-f19d-4aed-bde2-0859adc90092</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>774e6587-6c49-4d91-b83b-dd0e87520247</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <botMessages>
-                    <message>Many states have limited funds, so their FAFSA deadlines may be early. To be considered for the most money, file as early as possible.</message>
-                    <messageIdentifier>74ab7b62-ff1b-4da8-bdcd-13e29a4488d3</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>5238d83d-b480-44b4-b3cc-d3d81c5f8ed1</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <stepIdentifier>fb318517-b42c-4ad0-bfe2-c2b02f14959d</stepIdentifier>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>State</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>IsNotSet</operatorType>
-            </botStepConditions>
-            <botSteps>
-                <botMessages>
-                    <message>These deadlines are set by your home state and can vary by state. You can check all the state deadlines halfway down the page at https://studentaid.gov/h/apply-for-aid/fafsa.</message>
-                    <messageIdentifier>ba1935df-cd88-4245-a2fc-e979ac7a3415</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>25881adf-0a9f-4130-9cbc-ee48f71d1d76</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <botSteps>
-                <botMessages>
-                    <message>Many states have limited funds, so their FAFSA deadlines may be early. To be considered for the most money, file as early as possible.</message>
-                    <messageIdentifier>d7da1d62-5c51-4a82-ba5f-9622a0bb835b</messageIdentifier>
-                </botMessages>
-                <stepIdentifier>57131c08-4a11-4b85-9910-37b1f593cccd</stepIdentifier>
-                <type>Message</type>
-            </botSteps>
-            <stepIdentifier>4af81920-e6eb-415f-a249-2d00062ef2d8</stepIdentifier>
-            <type>Group</type>
-        </botSteps>
-        <botSteps>
-            <botVariableOperation>
-                <askCollectIfSet>true</askCollectIfSet>
-                <botMessages>
-                    <message>Do you want to check another state&apos;s deadline?</message>
-                    <messageIdentifier>ef0bc08b-e391-461f-996a-33587722a6c0</messageIdentifier>
-                </botMessages>
-                <botQuickReplyOptions>
-                    <literalValue>Yes</literalValue>
-                    <quickReplyOptionIdentifier>311d6b0d-9c72-4e6c-9bf8-f44845a5b0ab</quickReplyOptionIdentifier>
-                </botQuickReplyOptions>
-                <botQuickReplyOptions>
-                    <literalValue>No</literalValue>
-                    <quickReplyOptionIdentifier>bcc53980-f91d-42d9-bb02-f509b71d552b</quickReplyOptionIdentifier>
-                </botQuickReplyOptions>
-                <botVariableOperands>
-                    <disableAutoFill>true</disableAutoFill>
-                    <sourceName>_Boolean</sourceName>
-                    <sourceType>StandardMlSlotClass</sourceType>
-                    <targetName>Another_state_deadline</targetName>
-                    <targetType>ConversationVariable</targetType>
-                </botVariableOperands>
-                <optionalCollect>false</optionalCollect>
-                <quickReplyType>Static</quickReplyType>
-                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
-                <type>Collect</type>
-                <variableOperationIdentifier>3e3eb9e7-c920-49b2-b606-e414cf924bcc</variableOperationIdentifier>
-            </botVariableOperation>
-            <stepIdentifier>5236b53a-236d-4162-a7d3-a7d33db8e181</stepIdentifier>
-            <type>VariableOperation</type>
-        </botSteps>
-        <botSteps>
-            <botStepConditions>
-                <leftOperandName>Another_state_deadline</leftOperandName>
-                <leftOperandType>ConversationVariable</leftOperandType>
-                <operatorType>Equals</operatorType>
-                <rightOperandValue>true</rightOperandValue>
-            </botStepConditions>
-            <botSteps>
-                <botNavigation>
-                    <botNavigationLinks>
-                        <targetBotDialog>My_state_s_deadline_for_2021_22</targetBotDialog>
-                    </botNavigationLinks>
-                    <type>Redirect</type>
-                </botNavigation>
-                <stepIdentifier>0699c8a2-c712-4c52-a247-b6decb451a8b</stepIdentifier>
-                <type>Navigation</type>
-            </botSteps>
-            <stepIdentifier>bf29885b-bc12-4fb2-9b9f-fab1189fdf18</stepIdentifier>
-            <type>Group</type>
-        </botSteps>
+            <type>Message</type>
+        </botSteps>          
         <botSteps>
             <botMessages>
-                <message>Checking in: do you have more questions about FAFSA deadlines?</message>
-                <messageIdentifier>876d2dd8-d2f4-4df6-96a8-4d50cca49b03</messageIdentifier>
+                <message>Many states have limited funds, so their FAFSA deadlines may be early. To be considered for the most money, file as early as possible.</message>
+                <messageIdentifier>fc067aac-0751-4425-94ea-c8307bce9d65</messageIdentifier>
             </botMessages>
-            <stepIdentifier>6e88eb7d-1a5c-40be-ba3b-f5a9ce5dc7ce</stepIdentifier>
+            <stepIdentifier>03cce2e7-1277-49ed-9924-ee24cc6a8efa</stepIdentifier>
             <type>Message</type>
-        </botSteps>
+        </botSteps>          
         <botSteps>
-            <botNavigation>
-                <botNavigationLinks>
-                    <targetBotDialog>Federal_deadline_for_2021_22</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>My_college_s_deadline_for_2021_22</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</targetBotDialog>
-                </botNavigationLinks>
-                <botNavigationLinks>
-                    <targetBotDialog>No_I_don_t_have_more_deadline_questions</targetBotDialog>
-                </botNavigationLinks>
-                <type>Redirect</type>
-            </botNavigation>
-            <stepIdentifier>830d6d2b-f7ec-4000-8c75-7be9ed65792c</stepIdentifier>
-            <type>Navigation</type>
+            <botMessages>
+                <message>What state do you want to check the deadline for?</message>
+                <messageIdentifier>1675074b-f19d-4aed-bde2-0859adc90092</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>774e6587-6c49-4d91-b83b-dd0e87520247</stepIdentifier>
+            <type>Message</type>
+        </botSteps>                
+        <botSteps>
+            <stepIdentifier>08911727-8482-47d6-8fac-09393c4b9983</stepIdentifier>
+            <type>Wait</type>
         </botSteps>
         <developerName>My_state_s_deadline_for_2021_22</developerName>
-        <label>My state&apos;s deadline for 2021-22</label>
+        <label>My state&apos;s deadline</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
