@@ -165,7 +165,7 @@ FAFSA Question 44b,"Question 44b is asking if you (or your spouse, if married) m
 FAFSA Question 44c,"Question 44c is asking if you (or your spouse, if married) received any child support payments for any of your children. This does not apply to foster care or adoption payments. If you or your spouse did not receive these payments or you have no children, enter 0.",FAFSA-Question-44c,Form_Questions
 FAFSA Question 44d,"Question 44d is asking if you (or your spouse, if married) received any income from interest that you didn't need to pay taxes on. If you are filing electronically, the answer to this question may be pre-filled with “Transferred from the IRS.” If you or your spouse did not receive any income from this source, enter 0.",FAFSA-Question-44d,Form_Questions
 FAFSA Question 44e,"Question 44e is asking if you (or your spouse, if married) received any pensions or distributions from an IRA.  If you are filing electronically, the answer to this question may be pre-filled with “Transferred from the IRS.” If you or your spouse did not receive any income from this source, or the amount is negative, enter 0.",FAFSA-Question-44e,Form_Questions
-FAFSA Question 44f,"Question 44fis asking if you (or your spouse, if married) received any sort of living allowance paid to members of the military or clergy. On-base military housing or basic military allowances for housing don't count for this. Cash payments and cash value of benefits do count for this. If you or your spouse did not receive any income from this source, enter 0.",FAFSA-Question-44f,Form_Questions
+FAFSA Question 44f,"Question 44f is asking if you (or your spouse, if married) received any sort of living allowance paid to members of the military or clergy. On-base military housing or basic military allowances for housing don't count for this. Cash payments and cash value of benefits do count for this. If you or your spouse did not receive any income from this source, enter 0.",FAFSA-Question-44f,Form_Questions
 FAFSA Question 44g,"Question 44g is asking if you (or your spouse, if married) received any non-education benefits from being a veteran of the US military. If you or your spouse did not receive any income from this source or are not veterans of the military, enter 0.",FAFSA-Question-44g,Form_Questions
 FAFSA Question 44h,"Question 44h is asking if you (or your spouse, if married) received any other money you didn't pay taxes on, such as disability benefits and workers' compensation. If you or your spouse did not receive any income from these sources, enter 0.",FAFSA-Question-44h,Form_Questions
 FAFSA Question 44i,"Question 44i is asking if you (or your spouse, if married) had any other money received or paid on your behalf, such as bills, that you have not already included on this form. This money includes prepaid tuition plans, such as a 529 plan.",FAFSA-Question-44i,Form_Questions
@@ -182,16 +182,15 @@ FAFSA Question 48,"Question 48 is asking to confirm if you are in the military o
 If you are a National Guard or Reserves enlistee who is on active duty for state or training purposes, or if you are not currently serving on active duty in the U.S. Armed Forces, do not check the box.
 
 If the answer to this question is Yes, skip down to Step Five on the FAFSA Form.",FAFSA-Question-48,Form_Questions
-FAFSA Question 49,"Question 49 is asking if you are a veteran of the U.S. Armed Forces. Select Yes if you have engaged in active duty (including basic training) in the U.S. Armed Forces (Army, Navy, Air Force, Marines, or Coast Guard), or are a National Guard or Reserve enlistee who was called to active duty for other than state or training purposes, or were a cadet or midshipman at one of the service academies, and were released under a condition other than dishonorable. Also check the box if you are not a veteran now but will be one by June 30, 2022.
-
-Do not check the box if you:
+FAFSA Question 49 - Part 1,"Question 49 is asking if you are a veteran of the U.S. Armed Forces. Select Yes if you have engaged in active duty (including basic training) in the U.S. Armed Forces (Army, Navy, Air Force, Marines, or Coast Guard), or are a National Guard or Reserve enlistee who was called to active duty for other than state or training purposes, or were a cadet or midshipman at one of the service academies, and were released under a condition other than dishonorable. Also check the box if you are not a veteran now but will be one by June 30, 2022.",FAFSA-Question-49-Part-1,Form_Questions
+FAFSA Question 49 - Part 2,"Do not check the box if you:
 Are currently serving in the U.S. Armed Forces and will continue to serve through June 30, 2022
 Have never engaged in active duty (including basic training) in the U.S. Armed Forces
 Are currently an ROTC student, a cadet or midshipman at a service academy
 Are a National Guard or Reserves enlistee activated only for state or training purposes,  
 Were engaged in active duty in the U.S. Armed Forces but released under dishonorable conditions.
 
- If the answer to this question is Yes, skip down to Step Five on the FAFSA Form.",FAFSA-Question-49,Form_Questions
+If the answer to this question is Yes, skip down to Step Five on the FAFSA Form.",FAFSA-Question-49-Part-2,Form_Questions
 FAFSA Question 50,"Question 50 is asking if you have children you provide primary support for. Select Yes if you have children (or are expecting a child who will be born before or during the school year) and your child(ren) receive(s) more than half of their support from you (and if married, your spouse).
 
 Select No if you do not have children. Also select No if your children are not receiving more than half of their support from you (and if married, your spouse).
@@ -202,14 +201,13 @@ FAFSA Question 51,"Question 51 is asking if you have dependents who are not your
 Select No if you do not have dependents (other than your children or spouse). Also select No if you have dependents, but they are not receiving more than half of their support from you.
 
 If the answer to this question is Yes, skip down to Step Five on the FAFSA Form.",FAFSA-Question-51,Form_Questions
-FAFSA Question 52,"Question 52 is asking if your parents are deceased or if you have been a ward or dependent of the court as a teenager. Select Yes if:
+FAFSA Question 52 - Part 1,"Question 52 is asking if your parents are deceased or if you have been a ward or dependent of the court as a teenager. Select Yes if:
 You had no living parent (biological or adoptive) at any time since you turned age 13, even if you are now adopted.
 You were in foster care at any time since you turned age 13, even if you are no longer in foster care as of today.  
-you were a dependent or ward of the court at any time since you turned age 13, even if you are no longer a dependent/ward of the court as of today. For federal student aid purposes, someone who is incarcerated is not considered a ward of the court. 
-  
-If you are not sure if you were in foster care, check with your state child welfare agency. You can find out the contact information for your state child welfare agency by visiting your state child welfare agency. The financial aid administrator at your college may require you to provide proof that you were in foster care or a dependent/ward of the court.
+you were a dependent or ward of the court at any time since you turned age 13, even if you are no longer a dependent/ward of the court as of today. For federal student aid purposes, someone who is incarcerated is not considered a ward of the court.",FAFSA-Question-52-Part-1,Form_Questions
+FAFSA Question 52 - Part 1,"If you are not sure if you were in foster care, check with your state child welfare agency. You can find out the contact information for your state child welfare agency by visiting your state child welfare agency. The financial aid administrator at your college may require you to provide proof that you were in foster care or a dependent/ward of the court.
 
-If the answer to this question is Yes, skip to Step Five on the FAFSA form.",FAFSA-Question-52,Form_Questions
+If the answer to this question is Yes, skip to Step Five on the FAFSA form.",FAFSA-Question-52-Part-2,Form_Questions
 FAFSA Question 53,"Question 53 is asking if you are an emancipated minor. If you answer Yes to this question, you may be required to provide proof that you are an emancipated minor from a court decision that comes from the state you legally resided in when the decision was made. If you are still a minor and the court decision is not in effect currently or was not in effect when you became an adult, select No. If you are not an emancipated minor, select No.",FAFSA-Question-53,Form_Questions
 FAFSA Question 54,"Question 54 is asking if your legal guardian was not a parent or stepparent. If you answer Yes to this question, you may be required to provide proof of the court decision that identifies your legal guardian as someone other than a parent or stepparent. That court decision must come from the state you legally resided in when the decision was made. If the court decision for legal guardianship is not in effect currently or was not in effect when you became an adult, select No. ",FAFSA-Question-54,Form_Questions
 FAFSA Question 55,"Question 55 is asking if your school or school district considered you an unaccompanied youth that was homeless, or self-supporting and at risk of becoming homeless after July 1st of the year prior to the start of the school year for your FAFSA form. Answer “No” if you are not homeless or at risk of being homeless, or do not have a determination from your school or school district.",FAFSA-Question-55,Form_Questions
@@ -248,7 +246,7 @@ The FAFSA will list specific items that, if your parentls filed a Schedule 1 for
 
 If they filed a Schedule 1 with their tax return for reasons not listed as exempt, select ""Yes.""",FAFSA-Question-82,Form_Questions
 FAFSA Question 83,"Question 83 is asking if your parents or stepparents are dislocated workers, either due to layoffs, economic conditions, natural disasters, or previously occupied as a homemaker and struggling to find employment. You may be required to provide proof that your parents or stepparents are dislocated workers.",FAFSA-Question-83,Form_Questions
-FAFSA Question 84,Question 84 is asking for your parents' adjusted gross income from their tax returns. Enter their total adjusted gross income from their tax returns in whole dollars. The FAFSA form should tell you which line of their tax return you can find this information on. ,FAFSA-Question-84,Form_Questions
+FAFSA Question 84,"Question 84 is asking for your parents' adjusted gross income from their tax returns. Enter their total adjusted gross income from their tax returns in whole dollars. The FAFSA form should tell you which line of their tax return you can find this information on.",FAFSA-Question-84,Form_Questions
 FAFSA Question 85,"Question 85 is asking is for the amount your parents paid, according their tax returns. Enter their total income tax paid from their tax returns in whole dollars. The FAFSA form should tell you which line of your tax return you can find this information on.",FAFSA-Question-85,Form_Questions
 FAFSA Question 86,"Question 86 is asking how much money one of your parents made from working during the year listed. Even if they didn't file a tax return, you will have to enter any money they made for this question. Enter the amount in whole dollars. If they filed a tax return for that year, the FAFSA form should tell you which line of their tax return you can find this information on.",FAFSA-Question-86,Form_Questions
 FAFSA Question 87,"Question 87 is asking how much money one of your parents made from working during the year listed (not the same parent from question 86). Even if they didn't file a tax return, you will have to enter any money they made for this question. Enter the amount in whole dollars. If they filed a tax return for that year, the FAFSA form should tell you which line of their tax return you can find this information on.",FAFSA-Question-87,Form_Questions
@@ -308,9 +306,9 @@ FAFSA Question 103,"Question 103 is your signature and, if you completed Step Fo
 FAFSA Question 104,"If someone was paid to help you prepare this form, they must fill out this information. You don't need to do it!",FAFSA-Question-104,Form_Questions
 FAFSA Question 105,"If someone was paid to help you prepare this form, they must fill out this section. You don't need to do it!",FAFSA-Question-105,Form_Questions
 FAFSA Question 106,"If someone was paid to help you prepare this form, they must fill out this information. You don't need to do it!",FAFSA-Question-106,Form_Questions
-[INSTITUTION] FAFSA Deadline 2021,"Please turn in your FAFSA form to [LOCATION] by [DATE].
+INSTITUTION FAFSA Deadline 2021,"Please turn in your FAFSA form to [LOCATION] by [DATE].
 
-Note to Admin: Please update this response based on your institution's specific deadline.",[INSTITUTION]-FAFSA-Deadline,Terminology
+Note to Admin: Please update this response based on your institution's specific deadline.",INSTITUTION-Deadline-Deadline,Terminology
 Education Level,"If you are an American citizen, you are eligible for aid if you have received a high school diploma, received a General Educational Development (GED) certificate, or completed a high school education in a homeschool setting approved under law for your state.",Education-Level,Terminology
 Homeschool Eligibility,"Different states have different education requirements for homeschooling. In Nebraska and Vermont, education requirements come from local school boards. For information relevant to your state, please visit https://www.homeschool.com/articles/high-school-graduation-requirements-by-state/",Homeschool-Eligibility,Terminology
 Selective Service or Draft,"Male students must be registered with Selective Service to receive federal student aid. Male students who are 18-25 years old can register for Selective Service. For more information, please visit https://www.sss.gov/",Selective-Service-or-Draft,Terminology
@@ -318,18 +316,88 @@ Social Security Number,"To receive federal student aid, you must have a valid So
 
 If you are from the Republic of the Marshall Islands, Federated States of Micronesia, or the Republic of Palau, you do not need a valid Social Security number.",Social-Security-Number,Terminology
 Approved use of money,"When you complete the FAFSA, you sign a statement to certify you will use any money you get from federal student aid for educational purposes only and that you do not already owe money, due to a grant refund or another federal student loan going into default. This statement is in Step Seven",Approved-use-of-money,Terminology
-Federal FAFSA Deadline 2021,"Your FAFSA form is bound to the academic year you are in. If you start your academic year in August or September, the federal deadline for your FAFSA is the following year on June 30.",Federal-FAFSA-Deadline-2021,FAFSA_Deadline
-Alabama State FAFSA Deadline 2021, "Check with your financial aid administrator.",Alabama-FAFSA-Deadline-2021,FAFSA_Deadline 
-Alaska State FAFSA Deadline 2021,"Alaska Education Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted
-Alaska Performance Scholarship: For priority consideration, submit your application by June 30, 2021. Awards are made until funds are depleted.",Alaska-FAFSA-Deadline-2021,FAFSA_Deadline
-American Samoa FAFSA Deadline 2021,"Check with your financial aid administrator. Additional forms might be required.",American-Samoa-FAFSA-Deadline-2021,FAFSA_Deadline
-Arizona State FAFSA Deadline 2021,"Check with your financial aid administrator.",Arizona-FAFSA-Deadline-2021,FAFSA_Deadline
-Arkansas State FAFSA Deadline 2021,"Academic Challenge: July 1, 2021, by midnight CT.
+Federal FAFSA Deadline 2021,"Your FAFSA form is bound to the academic year you are in. If you start your academic year in August or September, the federal deadline for your FAFSA is the following year on June 30.",Federal-Deadline-2021,FAFSA_Deadline
+"Alabama, AL - State FAFSA Deadline 2021","Check with your financial aid administrator.",Alabama-Deadline-2021,FAFSA_Deadline 
+"Alaska, AK - State FAFSA Deadline 2021","Alaska Education Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted
+Alaska Performance Scholarship: For priority consideration, submit your application by June 30, 2021. Awards are made until funds are depleted.",Alaska-Deadline-2021,FAFSA_Deadline
+"American Samoa FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",American-Samoa-Deadline-2021,FAFSA_Deadline
+"Arizona, AZ - State FAFSA Deadline 2021","Check with your financial aid administrator.",Arizona-Deadline-2021,FAFSA_Deadline
+"Arkansas, AR - State FAFSA Deadline 2021","Academic Challenge: July 1, 2021, by midnight CT.
 ArFuture Grant (fall term): July 1, 2021, by midnight CT.
-ArFuture Grant (spring term): Jan. 10, 2022, by midnight CT.",Arkansas-FAFSA-Deadline-2021,FAFSA_Deadline
-California State FAFSA Deadline 2021,"For many state financial aid programs: March 2, 2021 (date postmarked).
+ArFuture Grant (spring term): Jan. 10, 2022, by midnight CT.",Arkansas-Deadline-2021,FAFSA_Deadline
+"California, CA - State FAFSA Deadline 2021","For many state financial aid programs: March 2, 2021 (date postmarked).
 Cal Grant also requires submission of a school-certified GPA by March 2, 2021.
 For additional community college Cal Grants: Sept. 2, 2021 (date postmarked)
-If you’re a noncitizen without a Social Security card or had one issued through the federal Deferred Action for Childhood Arrivals program, you should fill out the California Dream Act Application found at dream.csac.ca.gov. Contact the California Student Aid Commission csac.ca.gov or your financial aid administrator for more information.",California-FAFSA-Deadline-2021,FAFSA_Deadline
-Colorado State FAFSA Deadline 2021,"Check with your financial aid administrator.",Colorado-FAFSA-Deadline-2021,FAFSA_Deadline
-Connecticut State FAFSA Deadline 2021,"For priority consideration, submit your application by midnight CT, Feb. 15, 2021. Additional forms might be required. Contact your financial aid administrator or your state agency.",Connecticut-FAFSA-Deadline-2021,FAFSA_Deadline
+If you’re a noncitizen without a Social Security card or had one issued through the federal Deferred Action for Childhood Arrivals program, you should fill out the California Dream Act Application found at dream.csac.ca.gov. Contact the California Student Aid Commission csac.ca.gov or your financial aid administrator for more information.",California-Deadline-2021,FAFSA_Deadline
+"Colorado, CO - State FAFSA Deadline 2021","Check with your financial aid administrator.",Colorado-Deadline-2021,FAFSA_Deadline
+"Connecticut, CT - State FAFSA Deadline 2021","For priority consideration, submit your application by midnight CT, Feb. 15, 2021. Additional forms might be required. Contact your financial aid administrator or your state agency.",Connecticut-Deadline-2021,FAFSA_Deadline
+"Delaware, DE - State FAFSA Deadline 2021","April 15, 2021, by midnight CT",Delaware-Deadline-2021,FAFSA_Deadline
+"District of Columbia, DC - FAFSA Deadline 2021","For priority consideration, submit your FAFSA form by May 1, 2021. For the DC Tuition Assistance Grant, complete the DC OneApp and submit supporting documents by May 31, 2021, for priority consideration",District-of-Columbia-Deadline-2021,FAFSA_Deadline
+"Federated States of Micronesia - FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Federated-States-of-Micronesia-Deadline-2021,FAFSA_Deadline
+"Florida, FL - State FAFSA Deadline 2021","May 15, 2021 (date processed).",Florida-Deadline-2021,FAFSA_Deadline
+"Georgia, GA - State FAFSA Deadline 2021", "Check with your financial aid administrator.",Georgia-Deadline-2021,FAFSA_Deadline
+"Guam - FAFSA Deadline 2021", "Check with your financial aid administrator. Additional forms might be required.",Guam-Deadline-2021,FAFSA_Deadline
+"Hawaii, HI - State FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Hawaii-Deadline-2021,FAFSA_Deadline
+"Idaho, ID - FAFSA State Deadline 2021","Opportunity Grant: For priority consideration, submit your application by midnight CT, March 1, 2021. Additional forms might be required. Contact your financial aid administrator or your state agency.",Idaho-Deadline-2021,FAFSA_Deadline
+"Illinois, IL - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Visit isac.org for Monetary Award Program renewal deadline information. Awards are made until funds are depleted.",Illinois-Deadline-2021,FAFSA_Deadline
+"Indiana, IN - FAFSA State Deadline 2021","Adult Student Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted. New applicants must submit additional forms at ScholarTrack.IN.gov.
+Workforce Ready Grant: As soon as possible after Oct. 1, 2020.
+Frank O'Bannon Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.
+21st Century Scholarship: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.",Indiana-Deadline-2021,FAFSA_Deadline
+"Iowa, IA - FAFSA State Deadline 2021","July 1, 2021, by midnight CT. Earlier priority deadlines may exist for certain programs. Additional forms may be required.",Iowa-Deadline-2021,FAFSA_Deadline
+"Kansas, KS - FAFSA State Deadline 2021","For priority consideration, submit your application by midnight CT on April 1, 2021. Additional forms might be required. Contact your financial aid administrator or your state agency.",Kansas-Deadline-2021,FAFSA_Deadline
+"Kentucky, KY - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Awards made until funds are depleted.",Kentucky-Deadline-2021,FAFSA_Deadline
+"Louisiana, LA - FAFSA State Deadline 2021","July 1, 2022 (July 1, 2021 recommended)",Louisiana-Deadline-2021,FAFSA_Deadline
+"Maine, ME - FAFSA State Deadline 2021","May 1, 2021, by midnight CT",Maine-Deadline-2021,FAFSA_Deadline
+"Marshall Islands - FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Marshall-Islands-Deadline-2021,FAFSA_Deadline
+"Maryland, MD - FAFSA State Deadline 2021","March 1, 2021, by midnight CT",Maryland-Deadline-2021,FAFSA_Deadline
+"Massachusetts, MA - FAFSA State Deadline 2021","For priority consideration, submit your application by midnight CT on May 1, 2021.",Massachusetts-Deadline-2021,FAFSA_Deadline
+"Michigan, MI - FAFSA State Deadline 2021","May 1, 2021.",Michigan-Deadline-2021,FAFSA_Deadline
+"Minnesota, MN - FAFSA State Deadline 2021","30 days after term starts, by midnight CT.",Minnesota-Deadline-2021,FAFSA_Deadline
+"Mississippi, MS - FAFSA State Deadline 2021","MTAG and MESG Grants: Sept. 15, 2021, by midnight CT.
+HELP Scholarship: April 30, 2021, by midnight CT.",Mississippi-Deadline-2021,FAFSA_Deadline
+"Missouri, MO - FAFSA State Deadline 2021","For priority consideration, submit your application by Feb. 1, 2021. Applications are accepted through April 1, 2021, by midnight CT.",Missouri-Deadline-2021,FAFSA_Deadline
+"Montana, MT - FAFSA State Deadline 2021","For priority consideration, submit your application by Dec. 1, 2020. Check with your financial aid administrator. Additional forms might be required.",Montana-Deadline-2021,FAFSA_Deadline
+"N. Mariana Islands - FAFSA Deadline 2021","For priority consideration, submit your application by midnight CT on April 30, 2021. Additional forms may be required.",N-Mariana-Islands-Deadline-2021,FAFSA_Deadline
+"Nebraska, NE - FAFSA State Deadline 2021","Check with your financial aid administrator.",Nebraska-Deadline-2021,FAFSA_Deadline
+"Nevada, NV - FAFSA State Deadline 2021","Silver State Opportunity Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.
+Nevada Promise Scholarship: March 1, 2021. Additional forms might be required. Awards are made until funds are depleted.
+All other aid: Check with your financial aid administrator. Additional forms may be required.",Nevada-Deadline-2021,FAFSA_Deadline
+"New Hampshire, NH - FAFSA State Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",New-Hampshire-Deadline-2021,FAFSA_Deadline
+"New Jersey, NJ - FAFSA State Deadline 2021","2021–22 Tuition Aid Grant recipients: April 15, 2021, by midnight CT.
+All other applicants:
+Fall and spring terms: Sept. 15, 2021, by midnight CT
+Spring term only: Feb. 15, 2022, by midnight CT",New-Jersey-Deadline-2021,FAFSA_Deadline
+"New Mexico, NM - FAFSA State Deadline 2021","Check with your financial aid administrator.",New-Mexico-Deadline-2021,FAFSA_Deadline
+"New York, NY - FAFSA State Deadline 2021", "June 30, 2022, by midnight CT. Additional forms might be required.",New-York-Deadline-2021,FAFSA_Deadline
+"North Carolina, NC - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.",North-Carolina-Deadline-2021,FAFSA_Deadline
+"North Dakota, ND - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.",North-Dakota-Deadline-2021,FAFSA_Deadline
+"Ohio, OH - FAFSA State Deadline 2021","Oct. 1, 2021, by midnight CT",Ohio-Deadline-2021,FAFSA_Deadline
+"Oklahoma, OK - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.",Oklahoma-Deadline-2021,FAFSA_Deadline
+"Oregon, OR - FAFSA State Deadline 2021","Oregon Opportunity Grant: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.
+OSAC Private Scholarships: March 1, 2021. Additional forms might be required.
+Oregon Promise Grant: Contact your state agency. Additional forms might be required.",Oregon-Deadline-2021,FAFSA_Deadline
+"Palau - FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Palau-Deadline-2021,FAFSA_Deadline
+"Pennsylvania, PA - FAFSA State Deadline 2021","All first-time applicants enrolled in a community college; business, trade, or technical school; hospital school of nursing; designated Pennsylvania Open-Admission institution; or nontransferable two-year program: Aug. 1, 2021, by midnight CT. All other applicants: May 1, 2021, by midnight CT. Additional forms might be required.",Pennsylvania-Deadline-2021,FAFSA_Deadline
+"Puerto Rico, PR - FAFSA Deadline 2021","Check with your financial aid administrator.",Puerto-Rico-Deadline-2021,FAFSA_Deadline
+"Rhode Island, RI - FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Rhode-Island-Deadline-2021,FAFSA_Deadline
+"South Carolina, SC - FAFSA State Deadline 2021","SC Commission on Higher Education Need-based Grants: As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted.
+Tuition Grants: June 30, 2021, by midnight CT.",South-Carolina-Deadline-2021,FAFSA_Deadline
+"South Dakota, SD - FAFSA State Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",South-Dakota-Deadline-2021,FAFSA_Deadline
+"Tennessee, TN - FAFSA State Deadline 2021","State Grant: Prior-year recipients receive award if eligible and apply by March 15, 2021. All other awards made to neediest applicants. Awards are made until funds are depleted.
+Tennessee Promise: March 15, 2021, by midnight CT.
+State Lottery for fall term: Sept. 1, 2021, by midnight CT.
+State Lottery for spring and summer terms: Feb. 1, 2022, by midnight CT.",Tennessee-Deadline-2021,FAFSA_Deadline
+"Texas, TX - FAFSA Deadline 2021","For priority consideration, submit your application by Jan. 15, 2021. Additional forms might be required. Private and two-year institutions may have different deadlines. Check with your financial aid administrator.",Texas-Deadline-2021,FAFSA_Deadline
+"U.S. Virgin Islands - FAFSA Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",US-Virgin-Islands-Deadline-2021,FAFSA_Deadline
+"Utah, UT - FAFSA State Deadline 2021","Regents’ Scholarship: Feb. 1, 2021. For priority, submit your application by Dec. 4, 2020.
+Other programs: Check with your financial aid administrator. Awards are made until funds are depleted. Additional forms might be required.",Utah-Deadline-2021,FAFSA_Deadline
+"Vermont, VT - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020. Awards are made until funds are depleted. Additional forms might be required.",Vermont-Deadline-2021,FAFSA_Deadline
+"Virginia, VA - FAFSA State Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Virginia-Deadline-2021,FAFSA_Deadline
+"Washington, WA - FAFSA State Deadline 2021","As soon as possible after Oct. 1, 2020.
+Students ineligible for federal aid but who meet state financial aid program and residency requirements should complete the Washington Application for State Financial Aid at readysetgrad.org/wasfa instead of the FAFSA form. Contact the Washington Student Achievement Council (readysetgrad.org/wasfa) or your financial aid administrator for more information.",Washington-Deadline-2021,FAFSA_Deadline
+"West Virginia, WV - FAFSA State Deadline 2021","PROMISE Scholarship: March 1, 2021. New applicants must submit additional forms at cfwv.com. Contact your financial aid administrator or your state agency.
+WV Higher Education Grant Program: April 15, 2021.
+WV Invests Grant: For priority consideration, submit your application by April 15, 2021.",West-Virginia-Deadline-2021,FAFSA_Deadline
+"Wisconsin, WI - FAFSA State Deadline 2021","Check with your financial aid administrator.",Wisconsin-Deadline-2021,FAFSA_Deadline
+"Wyoming, WY - FAFSA State Deadline 2021","Check with your financial aid administrator. Additional forms might be required.",Wyoming-Deadline-2021,FAFSA_Deadline

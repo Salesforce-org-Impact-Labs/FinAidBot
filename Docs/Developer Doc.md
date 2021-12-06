@@ -47,7 +47,7 @@ After articles have been published, the bot has to learn about them. This happen
    1. `FAFSA` data category group that includes the data categories below
    2. `Form_Questions` data category
    3. `Terminology` data category
-
+   4. `FAFSA_Deadline` data category
 ![Einstein Bot Article Answers Settings](./images/FAFSABot-ArticleAnswersSettings.png)
  
 ### Utterances
