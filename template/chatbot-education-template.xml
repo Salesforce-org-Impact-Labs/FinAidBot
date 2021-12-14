@@ -1,0 +1,164 @@
+<!--
+  ~ Copyright 2021 salesforce.com, inc.
+  ~ All Rights Reserved
+  ~ Company Confidential
+  -->
+
+<!DOCTYPE iniFile SYSTEM "labels.dtd">
+<iniFile>
+    <section name="ChatbotEducationTemplate" all_languages="yes">
+        <!-- Template descriptions -->
+        <param name="SalesBot_Description">A website prospecting bot template to assist your company’s sales, service and marketing.</param>
+
+        <!-- Group Names -->
+        <param name="Finaid_GroupTitle">FinAid</param>
+        <param name="ConnectWithSales_GroupTitle">Connect with sales</param>
+        <param name="CheckIssueStatus_GroupTitle">Check issue status</param>
+        <param name="ReportIssue_GroupTitle">Report issue</param>
+        <param name="GatherInfo_GroupTitle">Gather info from user</param>
+
+        <!-- KeyEvents -->
+        <param name="KeyEvents_DialogTitle">Check deadline dates for FAFSA</param>
+        <param name="KeyEvents_Message1">Hi, I’m {Bot Name}, a digital assistant.</param>
+        <param name="KeyEvents_DialogDescription">Greet the user and review the pre-chat form, if used.</param>
+
+        <!-- Welcome-->
+        <param name="Welcome_DialogTitle">Welcome</param>
+        <param name="Welcome_Message1">Hi! I&apos;m FinAid Chatbot, a digital assistant. I&apos;m here to help you with your questions while you fill out your FAFSA form.</param>
+
+        <!-- Main Menu -->
+        <param name="MainMenu_DialogTitle">Main Menu</param>
+        <param name="MainMenu_Message1">What would you like to do?</param>
+
+        <!-- Transfer to agent -->
+        <param name="TransferToAgent_DialogTitle">Transfer to Agent</param>
+        <param name="Transfer_Message1">Let&apos;s get you over to an agent who can help.</param>
+
+        <!-- End Chat -->
+        <param name="EndChat_DialogTitle">End Chat</param>
+        <param name="EndChat_Message1">Thanks for taking the time to chat!</param>
+
+        <!-- Confused -->
+        <param name="Confused_DialogTitle">Confused</param>
+        <param name="Confused_Message1">Sorry, I&apos;m still learning, so I&apos;m afraid I couldn&apos;t understand that...</param>
+        
+        <!-- No Agent -->
+        <param name="NoAgent_DialogTitle">No Agent</param>
+        <param name="NoAgent_Message1">Unfortunately, there are no agents available at the moment</param>
+        
+        <!-- Article Answers -->
+        <param name="ArticleAnswers_DialogTitle">Article Answers</param>
+        <param name="ArticleAnswers_DialogDescription">Article Answers (Beta) can be used instead of the FAFSA Terms dialog</param>
+        <param name="ArticleAnswers_Message1">I found the following information</param>
+        <param name="ArticleAnswers_Message2">Was this useful?</param>
+
+        <!-- Error -->
+        <param name="Error_DialogTitle">Error Handler</param>
+        <param name="Error_Message1">Unfortunately, a system error occurred. I&apos;ll connect you to an agent who can help.</param>
+
+        <!-- FAFSA Eligibility -->
+        <param name="FAFSAEligibility_DialogTitle">Learn if I qualify for FAFSA</param>
+        <param name="FAFSAEligibility_DialogDescription">Eligibility dialog per FAFSA conversation experience design document.</param>
+        <param name="FAFSAEligibility_Message1">OK. You can check your eligibility here: https://fafsa.ed.gov/spa/fafsa4c/#/landing</param>
+
+        <!-- FAFSA Words -->
+        <param name="FAFSAWords_DialogTitle">Get help understanding financial terms</param>
+        <param name="FAFSAWords_DialogDescription">Uses Article Answers (Beta)</param>
+        <param name="FAFSAWords_Message1">Alright, happy to help.</param>
+        <param name="FAFSAWords_Message2">I can explain financial terms that may be new to you found on the FAFSA form.</param>
+        <param name="FAFSAWords_Message3">What word would you like to learn about?</param>
+
+        <!-- FAFSA Prompt -->
+        <param name="FAFSAPrompt_DialogTitle">What word would you like to learn about?</param>
+        <param name="FAFSAPrompt_DialogDescription">Prompts the user to enter some text when the system variable &quot;[System] Answer Input (Text)&quot; that hold user input is still empty. An example is when the Article Answer is invoked from a menu.</param>
+        <param name="FAFSAPrompt_Message1">What word would you like to learn about?</param>
+
+        <!-- FAFSA Anything Else -->
+        <param name="FAFSAAnythingElse_DialogTitle">Can I assist you with anything else?</param>
+        <param name="FAFSAAnythingElse_DialogDescription">Asks the user of anything else before ending the chat. This is where most dialogs redirect to per conversation experience design specs.</param>
+        <param name="FAFSAAnythingElse_Message1">Can I assist you with anything else?</param>
+        <param name="FAFSAAnythingElse_Message2">Yes - Take me back to the Main Menu</param>
+        <param name="FAFSAAnythingElse_Message3">No - I&apos;m all set for now</param>
+
+        <!-- FAFSA Application Form Question -->
+        <param name="FAFSAAppFormQuestion_DialogTitle">Get help filling out the FAFSA application</param>
+        <param name="FAFSAAppFormQuestion_DialogDescription">Uses Article Answers to provide answers to questions about the FAFSA application form</param>
+        <param name="FAFSAAppFormQuestion_Message1">OK, what question number on the FAFSA did you want help with?</param>
+
+        <!-- Federal Deadline -->
+        <param name="FederalDeadline_DialogTitle">Federal deadline</param>
+        <param name="FederalDeadline_Message1">Your FAFSA form is bound to the academic year you&apos;re in. If you start your academic year in August or September, the federal deadline for your FAFSA is the following year on June 30.</param>
+        <param name="FederalDeadline_Message2">You can also find additional information and details about these deadlines on the FAFSA website:  https://studentaid.gov/apply-for-aid/fafsa</param>
+        <param name="FederalDeadline_Message3">Would you like to create a calendar reminder for the Federal Deadline?</param>
+        <param name="FederalDeadline_Message4">Alright. Click on the following link to schedule your reminder: https://isvsi-14ddd2ecd93-17863866d4-17a352cf55d.force.com/student/apex/VF_DeadlineCalendarDownload?scode=FD</param>
+
+        <!-- College Deadline -->
+        <param name="CollegeDeadline_DialogTitle">My college&apos;s deadline</param>
+        <param name="CollegeDeadline_Message1">College FAFSA deadlines are usually early and can differ by school. If you cannot find your college's deadline you should search online for their most up-to-date deadline date.</param>
+        <param name="CollegeDeadline_Message2">Which college do you want to check the deadline for?</param>
+
+        <!-- State Deadline -->
+        <param name="StateDeadline_DialogTitle">My state&apos;s deadline</param>
+        <param name="StateDeadline_Message1">State deadlines are set by your home state and can vary by state. You can also check all the state deadlines halfway down the page at https://studentaid.gov/h/apply-for-aid/fafsa.</param>
+        <param name="StateDeadline_Message2">Many states have limited funds, so their FAFSA deadlines may be early. To be considered for the most money, file as early as possible.</param>
+        <param name="StateDeadline_Message3">What state do you want to check the deadline for?</param>
+
+        <!-- No More Deadline Questions-->
+        <param name="NoMoreDeadline_DialogTitle">No, I don&apos;t have more deadline questions</param>
+        
+        <!-- Not Sure Deadline -->
+        <param name="NotSureDeadline_DialogTitle">I&apos;m not sure</param>
+        <param name="NotSureDeadline_Message1">OK, no problem. Would you like to learn about how FAFSA deadlines work?</param>
+        <param name="NotSureDeadline_Message2">Alright! Here&apos;s what you need to know about FAFSA deadlines:
+The first type of deadline comes from colleges themselves before the academic year starts.
+To be considered for the most money, you need to submit by the college&apos;s deadline.</param>
+        <param name="NotSureDeadline_Message3">Checking in: do you have more questions about FAFSA deadlines?</param>
+
+        <!-- Multiple Colleges Deadline -->
+        <param name="MultipleCollegesDeadline_DialogTitle">What if I&apos;m applying for FAFSA for multiple colleges?</param>
+        <param name="MultipleCollegesDeadline_Message1">College FAFSA deadlines are usually early and can differ by school.</param>
+        <param name="MultipleCollegesDeadline_Message2">When applying to multiple schools, look up each college&apos;s due date, find the earliest one, and apply by that date.</param>
+        <param name="MultipleCollegesDeadline_Message3">Do you have more questions about FAFSA deadlines?</param>
+
+        <!-- All Done -->
+        <param name="AllDone_DialogTitle">No, I&apos;m all done</param>
+        <param name="AllDone_Message1">What would you like to do?</param>
+        
+        <!-- Variables -->
+        <param name="TemplateVar_AnotherCollege">Another college deadline</param>
+        <param name="TemplateVar_AnotherState">Another state deadline</param>
+        <param name="TemplateVar_AnswerFeedback">Answer Feedback</param>
+        <param name="TemplateVar_AssistAnythingElse">Assist with anything else</param>
+        <param name="TemplateVar_CalendarEvent">Calendar Event</param>
+        <param name="TemplateVar_CertifyNotinDefault">Certify Not in Default</param>
+        <param name="TemplateVar_CitizenOrOther">Citizen or Other</param>
+        <param name="TemplateVar_Deadline">Deadline</param>
+        <param name="TemplateVar_EnrolledAccepted">Enrolled Accepted</param>
+        <param name="TemplateVar_DeadlineRecord">FAFSA Deadline Record</param>
+        <param name="TemplateVar_HighSchoolGED">High School GED</param>
+        <param name="TemplateVar_LearnDeadlinesWork">Learn how deadlines work</param>
+        <param name="TemplateVar_MoreDeadlines">More Deadline Questions</param>
+        <param name="TemplateVar_SatisfactoryProgress">Satisfactory Academic Progress</param>
+        <param name="TemplateVar_SelectiveService">Selective Service</param>
+        <param name="TemplateVar_SSN">Social Security Number</param>
+        <param name="TemplateVar_State">State</param>
+        <param name="TemplateVar_LeadId">LeadId</param>
+        <param name="TemplateVar_MatchedCase">Matched Case</param>
+        <param name="TemplateVar_Else">Anything else</param>
+        <param name="TemplateVar_NeedsComment">Needs to add case comment</param>
+        <param name="TemplateVar_Transfer">Needs Transfer to Agent</param>
+        <param name="TemplateVar_ChangeOrder">Needs to change order</param>
+        <param name="TemplateVar_OpportunityId">OpportunityId</param>
+        <param name="TemplateVar_OpportunityOwner">OpportunityOwner</param>
+        <param name="TemplateVar_OrderNumber">Order Number</param>
+        <param name="TemplateVar_OrderAmount">Order Amount</param>
+        <param name="TemplateVar_OrderStatus">Order Status</param>
+        <param name="TemplateVar_Phone">Phone Number</param>
+        <param name="TemplateVar_Case">Case</param>
+        <param name="TemplateVar_Contact">Contact</param>
+        <param name="TemplateVar_Lead">Lead</param>
+        <param name="TemplateVar_ProvidedEmail">Provided Email</param>
+        <param name="TemplateVar_SalesCadenceId">Sales Cadence Id</param>
+        <param name="TemplateVar_SelectedProduct">Selected Product</param>
+    </section>
+</iniFile>

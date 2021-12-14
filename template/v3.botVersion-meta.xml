@@ -3,7 +3,7 @@
     <fullName>v3</fullName>
     <botDialogGroups>
         <developerName>FinAid</developerName>
-        <label>FinAid</label>
+        <label>${Finaid_GroupTitle}</label>
     </botDialogGroups>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
@@ -28,9 +28,9 @@
             </botNavigation>
             <type>Navigation</type>
         </botSteps>
-        <description>Version of the dialog used with V3 of the bot. Implements the conversation experience design spec.</description>
+        <description></description>
         <developerName>Key_Events_and_Deadlines</developerName>
-        <label>Check deadline dates for FAFSA</label>
+        <label>${KeyEvents_DialogTitle}</label>
         <mlIntent>Key_Events_and_Deadlines</mlIntent>
         <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -38,7 +38,7 @@
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Hi! I&apos;m FinAid Chatbot, a digital assistant. I&apos;m here to help you with your questions while you fill out your FAFSA form.</message>
+                <message>${Welcome_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -52,13 +52,13 @@
             <type>Navigation</type>
         </botSteps>
         <developerName>Welcome</developerName>
-        <label>Welcome</label>
+        <label>${Welcome_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>What would you like to do?</message>
+                <message>${MainMenu_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -81,13 +81,13 @@
             <type>Navigation</type>
         </botSteps>
         <developerName>Main_Menu</developerName>
-        <label>Main Menu</label>
+        <label>${MainMenu_DialogTitle}</label>
         <showInFooterMenu>true</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Let&apos;s get you over to an agent who can help.</message>
+                <message>${Transfer_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -98,7 +98,7 @@
             <type>SystemMessage</type>
         </botSteps>
         <developerName>Transfer_To_Agent</developerName>
-        <label>Transfer To Agent</label>
+        <label>${TransferToAgent_DialogTitle}</label>
         <mlIntent>Transfer_To_Agent</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>true</showInFooterMenu>
@@ -106,7 +106,7 @@
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Thanks for taking the time to chat!</message>
+                <message>${EndChat_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -123,13 +123,13 @@
             <type>Wait</type>
         </botSteps>
         <developerName>End_Chat</developerName>
-        <label>End Chat</label>
+        <label>${EndChat_DialogTitle}</label>
         <showInFooterMenu>true</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Sorry, I&apos;m still learning, so I&apos;m afraid I couldn&apos;t understand that...</message>
+                <message>${Confused_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -137,13 +137,13 @@
             <type>Wait</type>
         </botSteps>
         <developerName>Confused</developerName>
-        <label>Confused</label>
+        <label>${Confused_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Unfortunately, there are no agents available at the moment</message>
+                <message>${NoAgent_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -151,7 +151,7 @@
             <type>Wait</type>
         </botSteps>
         <developerName>No_Agent_Available</developerName>
-        <label>No Agent</label>
+        <label>${NoAgent_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -161,7 +161,7 @@
                 <askCollectIfSet>true</askCollectIfSet>
                 <autoSelectIfSingleChoice>false</autoSelectIfSingleChoice>
                 <botMessages>
-                    <message>I found the following information</message>
+                    <message>${ArticleAnswers_Message1}</message>
                 </botMessages>
                 <botVariableOperands>
                     <disableAutoFill>true</disableAutoFill>
@@ -196,7 +196,7 @@
             <botVariableOperation>
                 <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
-                    <message>Was this useful?</message>
+                    <message>${ArticleAnswers_Message2}</message>
                 </botMessages>
                 <botQuickReplyOptions>
                     <literalValue>Yes</literalValue>
@@ -238,15 +238,15 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Article Answers (Beta) can be used instead of the FAFSA Terms dialog</description>
+        <description>${ArticleAnswers_DialogDescription}</description>
         <developerName>Answer_Automation</developerName>
-        <label>Article Answers</label>
+        <label>${ArticleAnswers_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>Unfortunately, a system error occurred. I&apos;ll connect you to an agent who can help.</message>
+                <message>${Error_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -257,14 +257,14 @@
             <type>SystemMessage</type>
         </botSteps>
         <developerName>Error_Handling</developerName>
-        <label>Error Handler</label>
+        <label>${Error_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>OK. You can check your eligibility here: https://fafsa.ed.gov/spa/fafsa4c/#/landing</message>
+                <message>${FAFSAEligibility_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -283,9 +283,9 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Eligibility dialog per FAFSA conversation experience design document.</description>
+        <description>${FAFSAEligibility_DialogDescription}</description>
         <developerName>FAFSA_Eligibility</developerName>
-        <label>Learn if I qualify for FAFSA</label>
+        <label>${FAFSAEligibility_DialogTitle}</label>
         <mlIntent>FAFSA_Eligibility</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -294,28 +294,28 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>Alright, happy to help.</message>
+                <message>${FAFSAWords_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>I can explain financial terms that may be new to you found on the FAFSA form.</message>
+                <message>${FAFSAWords_Message2}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>What word would you like to learn about?</message>
+                <message>${FAFSAWords_Message3}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Uses Article Answers (Beta)</description>
+        <description>${FAFSAWords_DialogDescription}</description>
         <developerName>FAFSA_Words</developerName>
-        <label>Get help understanding financial terms</label>
+        <label>${FAFSAWords_DialogTitle}</label>
         <mlIntent>FAFSA_Words</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -324,16 +324,16 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>What word would you like to learn about?</message>
+                <message>${FAFSAPrompt_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Prompts the user to enter some text when the system variable &quot;[System] Answer Input (Text)&quot; that hold user input is still empty. An example is when the Article Answer is invoked from a menu.</description>
+        <description>${FAFSAPrompt_DialogDescription}</description>
         <developerName>FAFSA_Prompt</developerName>
-        <label>What word would you like to learn about?</label>
+        <label>${FAFSAPrompt_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -342,13 +342,13 @@
             <botVariableOperation>
                 <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
-                    <message>Can I assist you with anything else?</message>
+                    <message>${FAFSAAnythingElse_Message1}</message>
                 </botMessages>
                 <botQuickReplyOptions>
-                    <literalValue>Yes - Take me back to the Main Menu</literalValue>
+                    <literalValue>${FAFSAAnythingElse_Message2}</literalValue>
                 </botQuickReplyOptions>
                 <botQuickReplyOptions>
-                    <literalValue>No - I&apos;m all set for now</literalValue>
+                    <literalValue>${FAFSAAnythingElse_Message3}</literalValue>
                 </botQuickReplyOptions>
                 <botVariableOperands>
                     <disableAutoFill>true</disableAutoFill>
@@ -413,25 +413,25 @@
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Asks the user of anything else before ending the chat. This is where most dialogs redirect to per conversation experience design specs.</description>
+        <description>${FAFSAAnythingElse_DialogDescription}</description>
         <developerName>FAFSA_Anything_Else</developerName>
-        <label>Can I assist you with anything else?</label>
+        <label>${FAFSAAnythingElse_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>OK, what question number on the FAFSA did you want help with?</message>
+                <message>${FAFSAAppFormQuestion_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <type>Wait</type>
         </botSteps>
-        <description>Uses Article Answers to provide answers to questions about the FAFSA application form</description>
+        <description>${FAFSAAppFormQuestion_DialogDescription}</description>
         <developerName>FAFSA_Application_Form_Question</developerName>
-        <label>Get help filling out the FAFSA application</label>
+        <label>${FAFSAAppFormQuestion_DialogTitle}</label>
         <mlIntent>FAFSA_Application_Form_Question</mlIntent>
         <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
@@ -440,13 +440,13 @@
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>Your FAFSA form is bound to the academic year you&apos;re in. If you start your academic year in August or September, the federal deadline for your FAFSA is the following year on June 30.</message>
+                <message>${FederalDeadline_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>You can also find additional information and details about these deadlines on the FAFSA website:  https://studentaid.gov/apply-for-aid/fafsa</message>
+                <message>${FederalDeadline_Message2}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -454,7 +454,7 @@
             <botVariableOperation>
                 <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
-                    <message>Would you like to create a calendar reminder for the Federal Deadline?</message>
+                    <message>${FederalDeadline_Message3}</message>
                 </botMessages>
                 <botQuickReplyOptions>
                     <literalValue>Yes</literalValue>
@@ -485,7 +485,7 @@
             </botStepConditions>
             <botSteps>
                 <botMessages>
-                    <message>Alright. Click on the following link to schedule your reminder: https://isvsi-14ddd2ecd93-17863866d4-17a352cf55d.force.com/student/apex/VF_DeadlineCalendarDownload?scode=FD</message>
+                    <message>${FederalDeadline_Message4}</message>
                 </botMessages>
                 <type>Message</type>
             </botSteps>
@@ -501,20 +501,20 @@
             <type>Navigation</type>
         </botSteps>
         <developerName>Federal_deadline_for_2021_22</developerName>
-        <label>Federal deadline</label>
+        <label>${FederalDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>College FAFSA deadlines are usually early and can differ by school. If you cannot find your college's deadline you should search online for their most up-to-date deadline date.</message>
+                <message>${CollegeDeadline_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>            
         <botSteps>
             <botMessages>
-                <message>Which college do you want to check the deadline for?</message>
+                <message>${CollegeDeadline_Message2}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -522,26 +522,26 @@
             <type>Wait</type>
         </botSteps>
         <developerName>My_college_s_deadline_for_2021_22</developerName>
-        <label>My college&apos;s deadline</label>
+        <label>${CollegeDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>State deadlines are set by your home state and can vary by state. You can also check all the state deadlines halfway down the page at https://studentaid.gov/h/apply-for-aid/fafsa.</message>
+                <message>${StateDeadline_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>          
         <botSteps>
             <botMessages>
-                <message>Many states have limited funds, so their FAFSA deadlines may be early. To be considered for the most money, file as early as possible.</message>
+                <message>${StateDeadline_Message2}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>          
         <botSteps>
             <botMessages>
-                <message>What state do you want to check the deadline for?</message>
+                <message>${StateDeadline_Message3}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>                
@@ -549,7 +549,7 @@
             <type>Wait</type>
         </botSteps>
         <developerName>My_state_s_deadline_for_2021_22</developerName>
-        <label>My state&apos;s deadline</label>
+        <label>${StateDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -563,7 +563,7 @@
             <type>Navigation</type>
         </botSteps>
         <developerName>No_I_don_t_have_more_deadline_questions</developerName>
-        <label>No, I don&apos;t have more deadline questions</label>
+        <label>${NoMoreDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -572,7 +572,7 @@
             <botVariableOperation>
                 <askCollectIfSet>true</askCollectIfSet>
                 <botMessages>
-                    <message>OK, no problem. Would you like to learn about how FAFSA deadlines work?</message>
+                    <message>${NotSureDeadline_Message1}</message>
                 </botMessages>
                 <botQuickReplyOptions>
                     <literalValue>Yes</literalValue>
@@ -603,9 +603,7 @@
             </botStepConditions>
             <botSteps>
                 <botMessages>
-                    <message>Alright! Here&apos;s what you need to know about FAFSA deadlines:
-The first type of deadline comes from colleges themselves before the academic year starts.
-To be considered for the most money, you need to submit by the college&apos;s deadline.</message>
+                    <message>${NotSureDeadline_Message2}</message>
                 </botMessages>
                 <type>Message</type>
             </botSteps>
@@ -613,7 +611,7 @@ To be considered for the most money, you need to submit by the college&apos;s de
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>Checking in: do you have more questions about FAFSA deadlines?</message>
+                <message>${NotSureDeadline_Message3}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -639,26 +637,26 @@ To be considered for the most money, you need to submit by the college&apos;s de
             <type>Navigation</type>
         </botSteps>
         <developerName>I_m_not_sure</developerName>
-        <label>I&apos;m not sure</label>
+        <label>${NotSureDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>College FAFSA deadlines are usually early and can differ by school.</message>
+                <message>${MultipleCollegesDeadline_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>When applying to multiple schools, look up each college&apos;s due date, find the earliest one, and apply by that date.</message>
+                <message>${MultipleCollegesDeadline_Message2}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
         <botSteps>
             <botMessages>
-                <message>Do you have more questions about FAFSA deadlines?</message>
+                <message>${MultipleCollegesDeadline_Message3}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -681,14 +679,14 @@ To be considered for the most money, you need to submit by the college&apos;s de
             <type>Navigation</type>
         </botSteps>
         <developerName>Yes_what_if_I_m_applying_for_FAFSA_for_multiple_colleges</developerName>
-        <label>What if I&apos;m applying for FAFSA for multiple colleges?</label>
+        <label>${MultipleCollegesDeadline_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
         <botDialogGroup>FinAid</botDialogGroup>
         <botSteps>
             <botMessages>
-                <message>What would you like to do?</message>
+                <message>{AllDone_Message1}</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -711,7 +709,7 @@ To be considered for the most money, you need to submit by the college&apos;s de
             <type>Navigation</type>
         </botSteps>
         <developerName>No_I_m_all_done</developerName>
-        <label>No, I&apos;m all done</label>
+        <label>${AllDone_DialogTitle}</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <conversationSystemDialogs>
@@ -729,92 +727,92 @@ To be considered for the most money, you need to submit by the college&apos;s de
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Another_college_deadline</developerName>
-        <label>Another college deadline</label>
+        <label>TemplateVar_AnotherCollege</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Another_state_deadline</developerName>
-        <label>Another state deadline</label>
+        <label>${TemplateVar_AnotherState}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>AnswerFeedback</developerName>
-        <label>Answer Feedback</label>
+        <label>${TemplateVar_AnswerFeedback}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Object</dataType>
         <developerName>AnswerSelectedResult</developerName>
-        <label>Answer Selected Result</label>
+        <label>${TemplateVar_AnswerSelectedResult}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Assist_with_anything_else</developerName>
-        <label>Assist with anything else</label>
+        <label>${TemplateVar_AssistAnythingElse}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Calendar_Event</developerName>
-        <label>Calendar Event</label>
+        <label>${TemplateVar_CalendarEvent}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Certify_Not_in_Default</developerName>
-        <label>Certify Not in Default</label>
+        <label>${TemplateVar_CertifyNotinDefault}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Citizen_or_Other</developerName>
-        <label>Citizen or Other</label>
+        <label>${TemplateVar_CitizenOrOther}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Text</dataType>
         <developerName>Deadline</developerName>
-        <label>Deadline</label>
+        <label>${TemplateVar_Deadline}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Enrolled_Accepted</developerName>
-        <label>Enrolled_Accepted</label>
+        <label>${TemplateVar_EnrolledAccepted}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Object</dataType>
         <developerName>FAFSA_Deadline_Record</developerName>
-        <label>FAFSA Deadline Record</label>
+        <label>${TemplateVar_DeadlineRecord}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>High_School_GED</developerName>
-        <label>High School_GED</label>
+        <label>${TemplateVar_HighSchoolGED}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Learn_how_deadlines_work</developerName>
-        <label>Learn how deadlines work</label>
+        <label>${TemplateVar_LearnDeadlinesWork}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>More_Deadline_Questions</developerName>
-        <label>More Deadline Questions</label>
+        <label>${TemplateVar_MoreDeadlines}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Satisfactory_Academic_Progress</developerName>
-        <label>Satisfactory Academic Progress</label>
+        <label>${TemplateVar_SatisfactoryProgress}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Selective_Service</developerName>
-        <label>Selective Service</label>
+        <label>${TemplateVar_SelectiveService}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Boolean</dataType>
         <developerName>Social_Security_Number</developerName>
-        <label>Social Security Number</label>
+        <label>${TemplateVar_SSN}</label>
     </conversationVariables>
     <conversationVariables>
         <dataType>Text</dataType>
         <developerName>State</developerName>
-        <label>State</label>
+        <label>${TemplateVar_State}</label>
     </conversationVariables>
     <entryDialog>Welcome</entryDialog>
     <mainMenuDialog>Main_Menu</mainMenuDialog>
