@@ -26,6 +26,7 @@ Use the **Import Articles**  utility to insert or upsert [FAFSA Knowledge Articl
    1. `FAFSA` data category group, under which are the data categories below
    2. `Form_Questions`
    3. `Terminology`
+   4. `FAFSA_Deadline`
 3. If existing Knowledge Articles conflict with the CSV entries, archive the existing articles first using the **Knowledge** item in the Salesforce Lightning experience UI. Note: the **Knowledge** item is usually included in the **Service** and **Service Console** apps
 4. Using the Salesforce Lightning experience UI, go to **Setup -> Data -> Import Articles** or search for "article" in Setup's Quick Find box and click on **Import Articles**. This should bring up the **Import Articles** page.
 5. On the **Import Articles** page, step 4,
@@ -46,7 +47,7 @@ After articles have been published, the bot has to learn about them. This happen
    1. `FAFSA` data category group that includes the data categories below
    2. `Form_Questions` data category
    3. `Terminology` data category
-
+   4. `FAFSA_Deadline` data category
 ![Einstein Bot Article Answers Settings](./images/FAFSABot-ArticleAnswersSettings.png)
  
 ### Utterances
